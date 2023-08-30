@@ -19,3 +19,9 @@ def publications(request):
 
 def  galleries(request):
     return render(request, 'galleries.html')
+
+def about(request):
+    return render(request, 'about1.html')
+
+def membership(request):
+    return render(request, 'membership.html')
