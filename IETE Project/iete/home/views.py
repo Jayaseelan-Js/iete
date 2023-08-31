@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from .models import News
+from .models import News, Publication, Events, Education
 
 # Create your views here.
 
@@ -12,13 +12,19 @@ def news(request):
     return render(request, 'news.html', context)
 
 def event(request):
-    return render(request, 'event.html')
+    event = Events.objects.all()
+    context = {'events':event}
+    return render(request, 'event.html', context)
 
 def education(request):
-    return render(request, 'education.html')
+    edu = Education.objects.all()
+    context = {'education':edu}
+    return render(request, 'education.html', context)
 
 def publications(request):
-    return render(request, 'publications.html')
+    publication = Publication.objects.all()
+    context = {'publication':publication}
+    return render(request, 'publications.html', context)
 
 def galleries(request):
     return render(request, 'galleries.html')

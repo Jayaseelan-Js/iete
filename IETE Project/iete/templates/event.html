@@ -32,6 +32,9 @@ html, body { font-size: 16px; }
   <link href="https://preview.lsvr.sk/townpress/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
   <link href="https://preview.lsvr.sk/townpress/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
   <meta content="WordPress 6.0.5" name="generator"/>
+  <style>
+
+  </style>
  </head>
  <body class="archive post-type-archive post-type-archive-lsvr_event wp-custom-logo lsvr-accessibility" data-rsssl="1">
   <svg focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewbox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg">
@@ -413,22 +416,28 @@ html, body { font-size: 16px; }
              
              <!-- POST ARCHIVE CATEGORIES : end -->
              <!-- POST ARCHIVE GRID : begin -->
-             <div class="post-archive__grid">
+            <div class="post-archive__grid">
               <h2 class="post-archive__date">
                September 2023
               </h2>
+              
+              {% for event in events %}
               <div class="lsvr-grid lsvr-grid--2-cols lsvr-grid--md-2-cols lsvr-grid--sm-2-cols">
-               <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
+                
+                <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
                 <!-- POST : begin -->
+                <center>
                 <article class="post lsvr_event post-188 has-post-thumbnail">
+                 
                  <div class="c-content-box post__inner">
+
                   <!-- POST HEADER : begin -->
                   <header class="post__header">
                    <!-- POST THUMBNAIL : begin -->
                    <p class="post__thumbnail post__thumbnail--cropped">
-                    <a class="post__thumbnail-link post__thumbnail-link--cropped" href="https://preview.lsvr.sk/townpress/events/indie-movies-friday/" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-04-large-1024x614.jpg' );">
+                    <a class="post__thumbnail-link post__thumbnail-link--cropped" href="https://preview.lsvr.sk/townpress/events/indie-movies-friday/" style="background-image: url( '{{ event.image.url}}' );">
                      <span class="screen-reader-text">
-                      article-04-large
+                      {{event.title}}
                      </span>
                     </a>
                    </p>
@@ -436,7 +445,7 @@ html, body { font-size: 16px; }
                    <!-- POST TITLE : begin -->
                    <h3 class="post__title">
                     <a class="post__title-link" href="https://preview.lsvr.sk/townpress/events/indie-movies-friday/" rel="bookmark">
-                     Indie Movies Friday
+                     {{event.title}}
                     </a>
                    </h3>
                    <!-- POST TITLE : end -->
@@ -448,14 +457,14 @@ html, body { font-size: 16px; }
                    <li class="post__info-item post__info-item--date" title="Event Date">
                     <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
                     </span>
-                    September 7, 2023
+                    {{ event.start_date }}
                    </li>
                    <!-- POST DATE : end -->
                    <!-- POST TIME : begin -->
                    <li class="post__info-item post__info-item--time" title="Event Time">
                     <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--time">
                     </span>
-                    3:00 pm - 11:30 pm
+                    {{event.start_time}} - {{event.end_time}}
                    </li>
                    <!-- POST TIME : end -->
                    <!-- POST LOCATION : begin -->
@@ -463,513 +472,46 @@ html, body { font-size: 16px; }
                     <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--location">
                     </span>
                     <a class="post__location-link" href="https://preview.lsvr.sk/townpress/event-location/downtown-theater/">
-                     Downtown Theater
+                     {{event.location}}
                     </a>
                    </li>
                    <!-- POST LOCATION : end -->
                   </ul>
                   <!-- POST INFO : end -->
-                 </div>
                 </article>
+              </center>
+                 </div>
+                 {% endfor %}
+               
+                
                 <!-- POST : end -->
                </div>
+               
+                <!-- POST : end -->
+              </div>
+              
+              
                <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
                 <!-- POST : begin -->
                 <article class="post lsvr_event post-194 has-post-thumbnail">
-                 <div class="c-content-box post__inner">
-                  <!-- POST HEADER : begin -->
-                  <header class="post__header">
-                   <!-- POST THUMBNAIL : begin -->
-                   <p class="post__thumbnail post__thumbnail--cropped">
-                    <a class="post__thumbnail-link post__thumbnail-link--cropped" href="https://preview.lsvr.sk/townpress/events/theatre-performance/" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-11-large-1024x614.jpg' );">
-                     <span class="screen-reader-text">
-                      article-11-large
-                     </span>
-                    </a>
-                   </p>
-                   <!-- POST THUMBNAIL : end -->
-                   <!-- POST TITLE : begin -->
-                   <h3 class="post__title">
-                    <a class="post__title-link" href="https://preview.lsvr.sk/townpress/events/theatre-performance/" rel="bookmark">
-                     Theatre Performance
-                    </a>
-                   </h3>
-                   <!-- POST TITLE : end -->
-                  </header>
-                  <!-- POST HEADER : end -->
-                  <!-- POST INFO : begin -->
-                  <ul aria-label="Event Information" class="post__info">
-                   <!-- POST DATE : begin -->
-                   <li class="post__info-item post__info-item--date" title="Event Date">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
-                    </span>
-                    September 8, 2023
-                   </li>
-                   <!-- POST DATE : end -->
-                   <!-- POST TIME : begin -->
-                   <li class="post__info-item post__info-item--time" title="Event Time">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--time">
-                    </span>
-                    5:30 pm - 8:00 pm
-                   </li>
-                   <!-- POST TIME : end -->
-                   <!-- POST LOCATION : begin -->
-                   <li class="post__info-item post__info-item--location" title="Event Location">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--location">
-                    </span>
-                    <a class="post__location-link" href="https://preview.lsvr.sk/townpress/event-location/downtown-theater/">
-                     Downtown Theater
-                    </a>
-                   </li>
-                   <!-- POST LOCATION : end -->
-                  </ul>
-                  <!-- POST INFO : end -->
-                 </div>
+                
                 </article>
                 <!-- POST : end -->
                </div>
                <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
                 <!-- POST : begin -->
                 <article class="post lsvr_event post-190 has-post-thumbnail">
-                 <div class="c-content-box post__inner">
-                  <!-- POST HEADER : begin -->
-                  <header class="post__header">
-                   <!-- POST THUMBNAIL : begin -->
-                   <p class="post__thumbnail post__thumbnail--cropped">
-                    <a class="post__thumbnail-link post__thumbnail-link--cropped" href="https://preview.lsvr.sk/townpress/events/jazz-night/" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-05-large-1024x614.jpg' );">
-                     <span class="screen-reader-text">
-                      article-05-large
-                     </span>
-                    </a>
-                   </p>
-                   <!-- POST THUMBNAIL : end -->
-                   <!-- POST TITLE : begin -->
-                   <h3 class="post__title">
-                    <a class="post__title-link" href="https://preview.lsvr.sk/townpress/events/jazz-night/" rel="bookmark">
-                     Jazz Night
-                    </a>
-                   </h3>
-                   <!-- POST TITLE : end -->
-                  </header>
-                  <!-- POST HEADER : end -->
-                  <!-- POST INFO : begin -->
-                  <ul aria-label="Event Information" class="post__info">
-                   <!-- POST DATE : begin -->
-                   <li class="post__info-item post__info-item--date" title="Event Date">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
-                    </span>
-                    September 11, 2023
-                   </li>
-                   <!-- POST DATE : end -->
-                   <!-- POST TIME : begin -->
-                   <li class="post__info-item post__info-item--time" title="Event Time">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--time">
-                    </span>
-                    6:30 pm - 10:00 pm
-                   </li>
-                   <!-- POST TIME : end -->
-                   <!-- POST LOCATION : begin -->
-                   <li class="post__info-item post__info-item--location" title="Event Location">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--location">
-                    </span>
-                    <a class="post__location-link" href="https://preview.lsvr.sk/townpress/event-location/the-depot/">
-                     The Depot
-                    </a>
-                   </li>
-                   <!-- POST LOCATION : end -->
-                  </ul>
-                  <!-- POST INFO : end -->
-                 </div>
-                </article>
-                <!-- POST : end -->
-               </div>
-               <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
-                <!-- POST : begin -->
-                <article class="post lsvr_event post-192 has-post-thumbnail">
-                 <div class="c-content-box post__inner">
-                  <!-- POST HEADER : begin -->
-                  <header class="post__header">
-                   <!-- POST THUMBNAIL : begin -->
-                   <p class="post__thumbnail post__thumbnail--cropped">
-                    <a class="post__thumbnail-link post__thumbnail-link--cropped" href="https://preview.lsvr.sk/townpress/events/sunday-townpress-run/" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-02-large-1024x614.jpg' );">
-                     <span class="screen-reader-text">
-                      article-02-large
-                     </span>
-                    </a>
-                   </p>
-                   <!-- POST THUMBNAIL : end -->
-                   <!-- POST TITLE : begin -->
-                   <h3 class="post__title">
-                    <a class="post__title-link" href="https://preview.lsvr.sk/townpress/events/sunday-townpress-run/" rel="bookmark">
-                     Sunday TownPress Run
-                    </a>
-                   </h3>
-                   <!-- POST TITLE : end -->
-                  </header>
-                  <!-- POST HEADER : end -->
-                  <!-- POST INFO : begin -->
-                  <ul aria-label="Event Information" class="post__info">
-                   <!-- POST DATE : begin -->
-                   <li class="post__info-item post__info-item--date" title="Event Date">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
-                    </span>
-                    September 12, 2023
-                   </li>
-                   <!-- POST DATE : end -->
-                   <!-- POST TIME : begin -->
-                   <li class="post__info-item post__info-item--time" title="Event Time">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--time">
-                    </span>
-                    All-day event
-                   </li>
-                   <!-- POST TIME : end -->
-                   <!-- POST LOCATION : begin -->
-                   <li class="post__info-item post__info-item--location" title="Event Location">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--location">
-                    </span>
-                    <a class="post__location-link" href="https://preview.lsvr.sk/townpress/event-location/downtown/">
-                     Downtown
-                    </a>
-                   </li>
-                   <!-- POST LOCATION : end -->
-                  </ul>
-                  <!-- POST INFO : end -->
-                 </div>
-                </article>
-                <!-- POST : end -->
-               </div>
-               <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
-                <!-- POST : begin -->
-                <article class="post lsvr_event post-197 has-post-thumbnail">
-                 <div class="c-content-box post__inner">
-                  <!-- POST HEADER : begin -->
-                  <header class="post__header">
-                   <!-- POST THUMBNAIL : begin -->
-                   <p class="post__thumbnail post__thumbnail--cropped">
-                    <a class="post__thumbnail-link post__thumbnail-link--cropped" href="https://preview.lsvr.sk/townpress/events/town-meeting/" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-03-large-1024x614.jpg' );">
-                     <span class="screen-reader-text">
-                      article-03-large
-                     </span>
-                    </a>
-                   </p>
-                   <!-- POST THUMBNAIL : end -->
-                   <!-- POST TITLE : begin -->
-                   <h3 class="post__title">
-                    <a class="post__title-link" href="https://preview.lsvr.sk/townpress/events/town-meeting/" rel="bookmark">
-                     Town Meeting
-                    </a>
-                   </h3>
-                   <!-- POST TITLE : end -->
-                  </header>
-                  <!-- POST HEADER : end -->
-                  <!-- POST INFO : begin -->
-                  <ul aria-label="Event Information" class="post__info">
-                   <!-- POST DATE : begin -->
-                   <li class="post__info-item post__info-item--date" title="Event Date">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
-                    </span>
-                    September 13, 2023
-                   </li>
-                   <!-- POST DATE : end -->
-                   <!-- POST TIME : begin -->
-                   <li class="post__info-item post__info-item--time" title="Event Time">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--time">
-                    </span>
-                    6:00 pm - 7:30 pm
-                   </li>
-                   <!-- POST TIME : end -->
-                   <!-- POST LOCATION : begin -->
-                   <li class="post__info-item post__info-item--location" title="Event Location">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--location">
-                    </span>
-                    <a class="post__location-link" href="https://preview.lsvr.sk/townpress/event-location/downtown-theater/">
-                     Downtown Theater
-                    </a>
-                   </li>
-                   <!-- POST LOCATION : end -->
-                  </ul>
-                  <!-- POST INFO : end -->
-                 </div>
-                </article>
-                <!-- POST : end -->
-               </div>
-               <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
-                <!-- POST : begin -->
-                <article class="post lsvr_event post-188 has-post-thumbnail">
-                 <div class="c-content-box post__inner">
-                  <!-- POST HEADER : begin -->
-                  <header class="post__header">
-                   <!-- POST THUMBNAIL : begin -->
-                   <p class="post__thumbnail post__thumbnail--cropped">
-                    <a class="post__thumbnail-link post__thumbnail-link--cropped" href="https://preview.lsvr.sk/townpress/events/indie-movies-friday/" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-04-large-1024x614.jpg' );">
-                     <span class="screen-reader-text">
-                      article-04-large
-                     </span>
-                    </a>
-                   </p>
-                   <!-- POST THUMBNAIL : end -->
-                   <!-- POST TITLE : begin -->
-                   <h3 class="post__title">
-                    <a class="post__title-link" href="https://preview.lsvr.sk/townpress/events/indie-movies-friday/" rel="bookmark">
-                     Indie Movies Friday
-                    </a>
-                   </h3>
-                   <!-- POST TITLE : end -->
-                  </header>
-                  <!-- POST HEADER : end -->
-                  <!-- POST INFO : begin -->
-                  <ul aria-label="Event Information" class="post__info">
-                   <!-- POST DATE : begin -->
-                   <li class="post__info-item post__info-item--date" title="Event Date">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
-                    </span>
-                    September 21, 2023
-                   </li>
-                   <!-- POST DATE : end -->
-                   <!-- POST TIME : begin -->
-                   <li class="post__info-item post__info-item--time" title="Event Time">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--time">
-                    </span>
-                    3:00 pm - 11:30 pm
-                   </li>
-                   <!-- POST TIME : end -->
-                   <!-- POST LOCATION : begin -->
-                   <li class="post__info-item post__info-item--location" title="Event Location">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--location">
-                    </span>
-                    <a class="post__location-link" href="https://preview.lsvr.sk/townpress/event-location/downtown-theater/">
-                     Downtown Theater
-                    </a>
-                   </li>
-                   <!-- POST LOCATION : end -->
-                  </ul>
-                  <!-- POST INFO : end -->
-                 </div>
-                </article>
-                <!-- POST : end -->
-               </div>
-               <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
-                <!-- POST : begin -->
-                <article class="post lsvr_event post-194 has-post-thumbnail">
-                 <div class="c-content-box post__inner">
-                  <!-- POST HEADER : begin -->
-                  <header class="post__header">
-                   <!-- POST THUMBNAIL : begin -->
-                   <p class="post__thumbnail post__thumbnail--cropped">
-                    <a class="post__thumbnail-link post__thumbnail-link--cropped" href="https://preview.lsvr.sk/townpress/events/theatre-performance/" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-11-large-1024x614.jpg' );">
-                     <span class="screen-reader-text">
-                      article-11-large
-                     </span>
-                    </a>
-                   </p>
-                   <!-- POST THUMBNAIL : end -->
-                   <!-- POST TITLE : begin -->
-                   <h3 class="post__title">
-                    <a class="post__title-link" href="https://preview.lsvr.sk/townpress/events/theatre-performance/" rel="bookmark">
-                     Theatre Performance
-                    </a>
-                   </h3>
-                   <!-- POST TITLE : end -->
-                  </header>
-                  <!-- POST HEADER : end -->
-                  <!-- POST INFO : begin -->
-                  <ul aria-label="Event Information" class="post__info">
-                   <!-- POST DATE : begin -->
-                   <li class="post__info-item post__info-item--date" title="Event Date">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
-                    </span>
-                    September 22, 2023
-                   </li>
-                   <!-- POST DATE : end -->
-                   <!-- POST TIME : begin -->
-                   <li class="post__info-item post__info-item--time" title="Event Time">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--time">
-                    </span>
-                    5:30 pm - 8:00 pm
-                   </li>
-                   <!-- POST TIME : end -->
-                   <!-- POST LOCATION : begin -->
-                   <li class="post__info-item post__info-item--location" title="Event Location">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--location">
-                    </span>
-                    <a class="post__location-link" href="https://preview.lsvr.sk/townpress/event-location/downtown-theater/">
-                     Downtown Theater
-                    </a>
-                   </li>
-                   <!-- POST LOCATION : end -->
-                  </ul>
-                  <!-- POST INFO : end -->
-                 </div>
-                </article>
-                <!-- POST : end -->
-               </div>
-               <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
-                <!-- POST : begin -->
-                <article class="post lsvr_event post-186 has-post-thumbnail">
-                 <div class="c-content-box post__inner">
-                  <!-- POST HEADER : begin -->
-                  <header class="post__header">
-                   <!-- POST THUMBNAIL : begin -->
-                   <p class="post__thumbnail post__thumbnail--cropped">
-                    <a class="post__thumbnail-link post__thumbnail-link--cropped" href="https://preview.lsvr.sk/townpress/events/kids-sports-day/" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-01-large-1024x614.jpg' );">
-                     <span class="screen-reader-text">
-                      article-01-large
-                     </span>
-                    </a>
-                   </p>
-                   <!-- POST THUMBNAIL : end -->
-                   <!-- POST TITLE : begin -->
-                   <h3 class="post__title">
-                    <a class="post__title-link" href="https://preview.lsvr.sk/townpress/events/kids-sports-day/" rel="bookmark">
-                     Kids Sports Day
-                    </a>
-                   </h3>
-                   <!-- POST TITLE : end -->
-                  </header>
-                  <!-- POST HEADER : end -->
-                  <!-- POST INFO : begin -->
-                  <ul aria-label="Event Information" class="post__info">
-                   <!-- POST DATE : begin -->
-                   <li class="post__info-item post__info-item--date" title="Event Date">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
-                    </span>
-                    September 25, 2023
-                   </li>
-                   <!-- POST DATE : end -->
-                   <!-- POST TIME : begin -->
-                   <li class="post__info-item post__info-item--time" title="Event Time">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--time">
-                    </span>
-                    8:00 am - 5:00 pm
-                   </li>
-                   <!-- POST TIME : end -->
-                   <!-- POST LOCATION : begin -->
-                   <li class="post__info-item post__info-item--location" title="Event Location">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--location">
-                    </span>
-                    <a class="post__location-link" href="https://preview.lsvr.sk/townpress/event-location/townpress-stadium/">
-                     TownPress Stadium
-                    </a>
-                   </li>
-                   <!-- POST LOCATION : end -->
-                  </ul>
-                  <!-- POST INFO : end -->
-                 </div>
-                </article>
-                <!-- POST : end -->
-               </div>
-               <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
-                <!-- POST : begin -->
-                <article class="post lsvr_event post-190 has-post-thumbnail">
-                 <div class="c-content-box post__inner">
-                  <!-- POST HEADER : begin -->
-                  <header class="post__header">
-                   <!-- POST THUMBNAIL : begin -->
-                   <p class="post__thumbnail post__thumbnail--cropped">
-                    <a class="post__thumbnail-link post__thumbnail-link--cropped" href="https://preview.lsvr.sk/townpress/events/jazz-night/" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-05-large-1024x614.jpg' );">
-                     <span class="screen-reader-text">
-                      article-05-large
-                     </span>
-                    </a>
-                   </p>
-                   <!-- POST THUMBNAIL : end -->
-                   <!-- POST TITLE : begin -->
-                   <h3 class="post__title">
-                    <a class="post__title-link" href="https://preview.lsvr.sk/townpress/events/jazz-night/" rel="bookmark">
-                     Jazz Night
-                    </a>
-                   </h3>
-                   <!-- POST TITLE : end -->
-                  </header>
-                  <!-- POST HEADER : end -->
-                  <!-- POST INFO : begin -->
-                  <ul aria-label="Event Information" class="post__info">
-                   <!-- POST DATE : begin -->
-                   <li class="post__info-item post__info-item--date" title="Event Date">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
-                    </span>
-                    September 25, 2023
-                   </li>
-                   <!-- POST DATE : end -->
-                   <!-- POST TIME : begin -->
-                   <li class="post__info-item post__info-item--time" title="Event Time">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--time">
-                    </span>
-                    6:30 pm - 10:00 pm
-                   </li>
-                   <!-- POST TIME : end -->
-                   <!-- POST LOCATION : begin -->
-                   <li class="post__info-item post__info-item--location" title="Event Location">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--location">
-                    </span>
-                    <a class="post__location-link" href="https://preview.lsvr.sk/townpress/event-location/the-depot/">
-                     The Depot
-                    </a>
-                   </li>
-                   <!-- POST LOCATION : end -->
-                  </ul>
-                  <!-- POST INFO : end -->
-                 </div>
+                
                 </article>
                 <!-- POST : end -->
                </div>
               </div>
-              <h2 class="post-archive__date">
-               October 2023
-              </h2>
+              
               <div class="lsvr-grid lsvr-grid--2-cols lsvr-grid--md-2-cols lsvr-grid--sm-2-cols">
                <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
                 <!-- POST : begin -->
                 <article class="post lsvr_event post-188 has-post-thumbnail">
-                 <div class="c-content-box post__inner">
-                  <!-- POST HEADER : begin -->
-                  <header class="post__header">
-                   <!-- POST THUMBNAIL : begin -->
-                   <p class="post__thumbnail post__thumbnail--cropped">
-                    <a class="post__thumbnail-link post__thumbnail-link--cropped" href="https://preview.lsvr.sk/townpress/events/indie-movies-friday/" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-04-large-1024x614.jpg' );">
-                     <span class="screen-reader-text">
-                      article-04-large
-                     </span>
-                    </a>
-                   </p>
-                   <!-- POST THUMBNAIL : end -->
-                   <!-- POST TITLE : begin -->
-                   <h3 class="post__title">
-                    <a class="post__title-link" href="https://preview.lsvr.sk/townpress/events/indie-movies-friday/" rel="bookmark">
-                     Indie Movies Friday
-                    </a>
-                   </h3>
-                   <!-- POST TITLE : end -->
-                  </header>
-                  <!-- POST HEADER : end -->
-                  <!-- POST INFO : begin -->
-                  <ul aria-label="Event Information" class="post__info">
-                   <!-- POST DATE : begin -->
-                   <li class="post__info-item post__info-item--date" title="Event Date">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
-                    </span>
-                    October 5, 2023
-                   </li>
-                   <!-- POST DATE : end -->
-                   <!-- POST TIME : begin -->
-                   <li class="post__info-item post__info-item--time" title="Event Time">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--time">
-                    </span>
-                    3:00 pm - 11:30 pm
-                   </li>
-                   <!-- POST TIME : end -->
-                   <!-- POST LOCATION : begin -->
-                   <li class="post__info-item post__info-item--location" title="Event Location">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--location">
-                    </span>
-                    <a class="post__location-link" href="https://preview.lsvr.sk/townpress/event-location/downtown-theater/">
-                     Downtown Theater
-                    </a>
-                   </li>
-                   <!-- POST LOCATION : end -->
-                  </ul>
-                  <!-- POST INFO : end -->
-                 </div>
+                
                 </article>
                 <!-- POST : end -->
                </div>
@@ -1537,147 +1079,7 @@ html, body { font-size: 16px; }
                 </div>
                </form>
                <!-- FILTER FORM : end -->
-               <p class="widget__more">
-                <a class="widget__more-link" href="https://preview.lsvr.sk/townpress/events/">
-                 All Events
-                </a>
-               </p>
-              </div>
-             </div>
-            </div>
-            <div class="widget lsvr_event-featured-widget" id="lsvr_events_event_featured-2">
-             <div class="widget__inner">
-              <h3 class="widget__title widget__title--has-icon">
-               <span aria-hidden="true" class="widget__title-icon icon-calendar-full">
-               </span>
-               Featured Event
-              </h3>
-              <div class="widget__content lsvr_event-featured-widget__content">
-               <p class="lsvr_event-featured-widget__thumb">
-                <a class="lsvr_event-featured-widget__thumb-link" href="https://preview.lsvr.sk/townpress/events/summer-rock-festival/">
-                 <img alt="article-07-large" class="attachment-medium size-medium wp-post-image" height="360" loading="lazy" sizes="(max-width: 600px) 100vw, 600px" src="https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-07-large-600x360.jpg" srcset="https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-07-large-600x360.jpg 600w, https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-07-large-768x461.jpg 768w, https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-07-large-1024x614.jpg 1024w, https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-07-large.jpg 2000w" width="600"/>
-                </a>
-               </p>
-               <div class="lsvr_event-featured-widget__content-inner">
-                <h4 class="lsvr_event-featured-widget__title">
-                 <a class="lsvr_event-featured-widget__title-link" href="https://preview.lsvr.sk/townpress/events/summer-rock-festival/">
-                  Summer Rock Festival
-                 </a>
-                </h4>
-                <p class="lsvr_event-featured-widget__date" title="Event Date">
-                 July 12, 2023
-                </p>
-                <p class="lsvr_event-featured-widget__info">
-                 <span class="lsvr_event-featured-widget__time" title="Event Time">
-                  All-day event
-                 </span>
-                 <span class="lsvr_event-featured-widget__location" title="Event Location">
-                  at
-                  <a class="lsvr_event-featured-widget__location-link" href="https://preview.lsvr.sk/townpress/event-location/white-rock-amphitheatre/">
-                   White Rock Amphitheatre
-                  </a>
-                 </span>
-                </p>
-                <div class="lsvr_event-featured-widget__excerpt">
-                 <p>
-                  Initially, some of the earliest rock festivals were built on the foundation of pre-existing jazz and blues festivals, but quickly evolved to reflect the rapidly changing musical tastes of the time.
-                 </p>
-                </div>
-                <p class="widget__more">
-                 <a class="widget__more-link" href="https://preview.lsvr.sk/townpress/events/">
-                  More Events
-                 </a>
-                </p>
-               </div>
-              </div>
-             </div>
-            </div>
-            <div class="widget lsvr_event-list-widget" id="lsvr_events_event_list-3">
-             <div class="widget__inner">
-              <h3 class="widget__title widget__title--has-icon">
-               <span aria-hidden="true" class="widget__title-icon icon-calendar-full">
-               </span>
-               Upcoming Events
-              </h3>
-              <div class="widget__content">
-               <ul class="lsvr_event-list-widget__list lsvr_event-list-widget__list--has-bold-date">
-                <li class="lsvr_event-list-widget__item lsvr_event-list-widget__item--has-thumb">
-                 <p class="lsvr_event-list-widget__item-date lsvr_event-list-widget__item-date--bold" title="September 7, 2023">
-                  <span aria-hidden="true" class="lsvr_event-list-widget__item-date-month">
-                   Sep
-                  </span>
-                  <span aria-hidden="true" class="lsvr_event-list-widget__item-date-day">
-                   7
-                  </span>
-                 </p>
-                 <h4 class="lsvr_event-list-widget__item-title">
-                  <a class="lsvr_event-list-widget__item-title-link" href="https://preview.lsvr.sk/townpress/events/indie-movies-friday/">
-                   Indie Movies Friday
-                  </a>
-                 </h4>
-                 <p class="lsvr_event-list-widget__item-info">
-                  <span class="lsvr_event-list-widget__item-time" title="Event Time">
-                   3:00 pm - 11:30 pm
-                  </span>
-                  <span class="lsvr_event-list-widget__item-location" title="Event Location">
-                   at
-                   <a class="lsvr_event-list-widget__item-location-link" href="https://preview.lsvr.sk/townpress/event-location/downtown-theater/">
-                    Downtown Theater
-                   </a>
-                  </span>
-                 </p>
-                </li>
-                <li class="lsvr_event-list-widget__item lsvr_event-list-widget__item--has-thumb">
-                 <p class="lsvr_event-list-widget__item-date lsvr_event-list-widget__item-date--bold" title="September 8, 2023">
-                  <span aria-hidden="true" class="lsvr_event-list-widget__item-date-month">
-                   Sep
-                  </span>
-                  <span aria-hidden="true" class="lsvr_event-list-widget__item-date-day">
-                   8
-                  </span>
-                 </p>
-                 <h4 class="lsvr_event-list-widget__item-title">
-                  <a class="lsvr_event-list-widget__item-title-link" href="https://preview.lsvr.sk/townpress/events/theatre-performance/">
-                   Theatre Performance
-                  </a>
-                 </h4>
-                 <p class="lsvr_event-list-widget__item-info">
-                  <span class="lsvr_event-list-widget__item-time" title="Event Time">
-                   5:30 pm - 8:00 pm
-                  </span>
-                  <span class="lsvr_event-list-widget__item-location" title="Event Location">
-                   at
-                   <a class="lsvr_event-list-widget__item-location-link" href="https://preview.lsvr.sk/townpress/event-location/downtown-theater/">
-                    Downtown Theater
-                   </a>
-                  </span>
-                 </p>
-                </li>
-                <li class="lsvr_event-list-widget__item lsvr_event-list-widget__item--has-thumb">
-                 <p class="lsvr_event-list-widget__item-date lsvr_event-list-widget__item-date--bold" title="September 11, 2023">
-                  <span aria-hidden="true" class="lsvr_event-list-widget__item-date-month">
-                   Sep
-                  </span>
-                  <span aria-hidden="true" class="lsvr_event-list-widget__item-date-day">
-                   11
-                  </span>
-                 </p>
-                 <h4 class="lsvr_event-list-widget__item-title">
-                  <a class="lsvr_event-list-widget__item-title-link" href="https://preview.lsvr.sk/townpress/events/jazz-night/">
-                   Jazz Night
-                  </a>
-                 </h4>
-                 <p class="lsvr_event-list-widget__item-info">
-                  <span class="lsvr_event-list-widget__item-time" title="Event Time">
-                   6:30 pm - 10:00 pm
-                  </span>
-                  <span class="lsvr_event-list-widget__item-location" title="Event Location">
-                   at
-                   <a class="lsvr_event-list-widget__item-location-link" href="https://preview.lsvr.sk/townpress/event-location/the-depot/">
-                    The Depot
-                   </a>
-                  </span>
-                 </p>
+               
                 </li>
                 <li class="lsvr_event-list-widget__item lsvr_event-list-widget__item--has-thumb">
                  <p class="lsvr_event-list-widget__item-date lsvr_event-list-widget__item-date--bold" title="September 12, 2023">

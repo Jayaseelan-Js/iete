@@ -452,21 +452,21 @@ html, body { font-size: 16px; }
                  </ul>
                 </li>
                 <!-- .bbp-header -->
+                {% for publications in publication %}
                 <li class="bbp-body">
                  <ul class="loop-item-0 bbp-forum-status-open bbp-forum-visibility-publish odd post-276 forum type-forum status-publish hentry" id="bbp-forum-276">
                   <li class="bbp-forum-info">
                    <a class="bbp-forum-title" href="https://preview.lsvr.sk/townpress/forums/forum/ask-the-town-council/">
-                    Ask the Town Council
+                    {{publications.title}}
                    </a>
                    <div class="bbp-forum-content">
-                    If you have any questions for people running our city, this is the forum for you.
+                    {{publications.abstract}}
                    </div>
                   </li>
-                  
                   
                   <li class="bbp-forum-freshness">
                    <a href="https://preview.lsvr.sk/townpress/forums/topic/in-various-countries-municipalities-are-sometimes-referred-to-as-communes/#post-328" title="Reply To: In various countries, municipalities are sometimes referred to as communes">
-                    5 years, 8 months ago
+                    {{publications.publication_date}}
                    </a>
                    <p class="bbp-topic-meta">
                     <span class="bbp-topic-freshness-author">
@@ -475,128 +475,15 @@ html, body { font-size: 16px; }
                        <img alt="" class="avatar avatar-14 photo" height="14" loading="lazy" src="https://secure.gravatar.com/avatar/84e69c3abb86377c6d48be069f66425f?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/84e69c3abb86377c6d48be069f66425f?s=28&amp;d=mm&amp;r=g 2x" width="14"/>
                       </span>
                       <span class="bbp-author-name">
-                       valeriadecima
+                       {{publications.authors}}
                       </span>
                      </a>
                     </span>
                    </p>
                   </li>
                  </ul>
-                 <!-- #bbp-forum-276 -->
-                 <ul class="loop-item-1 bbp-forum-status-open bbp-forum-visibility-publish even post-274 forum type-forum status-publish hentry" id="bbp-forum-274">
-                  <li class="bbp-forum-info">
-                   <a class="bbp-forum-title" href="https://preview.lsvr.sk/townpress/forums/forum/citizen-complaints/">
-                    Citizen Complaints
-                   </a>
-                   <div class="bbp-forum-content">
-                    Use this forum to report anything that bothers you.
-                   </div>
-                  </li>
-            
-                  <li class="bbp-forum-freshness">
-                   <a href="https://preview.lsvr.sk/townpress/forums/topic/the-term-municipality-is-also-used-to-mean-the-governing/#post-334" title="Reply To: The term municipality is also used to mean the governing">
-                    5 years, 8 months ago
-                   </a>
-                   <p class="bbp-topic-meta">
-                    <span class="bbp-topic-freshness-author">
-                     <a class="bbp-author-link" href="https://preview.lsvr.sk/townpress/forums/users/mathiasoliver/" title="View mathiasoliver's profile">
-                      <span class="bbp-author-avatar">
-                       <img alt="" class="avatar avatar-14 photo" height="14" loading="lazy" src="https://secure.gravatar.com/avatar/7f953d964e1420c6754f5946c6ce113a?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/7f953d964e1420c6754f5946c6ce113a?s=28&amp;d=mm&amp;r=g 2x" width="14"/>
-                      </span>
-                      <span class="bbp-author-name">
-                       mathiasoliver
-                      </span>
-                     </a>
-                    </span>
-                   </p>
-                  </li>
-                 </ul>
-                 <!-- #bbp-forum-274 -->
-                 <ul class="loop-item-2 bbp-forum-status-open bbp-forum-visibility-publish odd post-272 forum type-forum status-publish hentry" id="bbp-forum-272">
-                  <li class="bbp-forum-info">
-                   <a class="bbp-forum-title" href="https://preview.lsvr.sk/townpress/forums/forum/free-discussion/">
-                    Free Discussion
-                   </a>
-                   <div class="bbp-forum-content">
-                    Here you can discuss any topic, but keep it clean please.
-                   </div>
-                  </li>
-                  
-                  <li class="bbp-forum-freshness">
-                   <a href="https://preview.lsvr.sk/townpress/forums/topic/in-australia-the-term-local-government-area/#post-340" title="Reply To: In Australia, the term local government area">
-                    5 years, 8 months ago
-                   </a>
-                   <p class="bbp-topic-meta">
-                    <span class="bbp-topic-freshness-author">
-                     <a class="bbp-author-link" href="https://preview.lsvr.sk/townpress/forums/users/valeriadecima/" title="View valeriadecima's profile">
-                      <span class="bbp-author-avatar">
-                       <img alt="" class="avatar avatar-14 photo" height="14" loading="lazy" src="https://secure.gravatar.com/avatar/84e69c3abb86377c6d48be069f66425f?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/84e69c3abb86377c6d48be069f66425f?s=28&amp;d=mm&amp;r=g 2x" width="14"/>
-                      </span>
-                      <span class="bbp-author-name">
-                       valeriadecima
-                      </span>
-                     </a>
-                    </span>
-                   </p>
-                  </li>
-                 </ul>
-                 <!-- #bbp-forum-272 -->
-                 <ul class="loop-item-3 bbp-forum-status-open bbp-forum-visibility-publish even post-270 forum type-forum status-publish hentry" id="bbp-forum-270">
-                  <li class="bbp-forum-info">
-                   <a class="bbp-forum-title" href="https://preview.lsvr.sk/townpress/forums/forum/upcoming-music-events/">
-                    Upcoming Music Events
-                   </a>
-                   <div class="bbp-forum-content">
-                    Info about upcoming music events in our town.
-                   </div>
-                  </li>
-                  
-                  <li class="bbp-forum-freshness">
-                   <a href="https://preview.lsvr.sk/townpress/forums/topic/summer-vacation-also-called-summer-holiday-or-summer-break-is-a-school-holiday/#post-320" title="Reply To: Summer vacation (also called summer holiday or summer break) is a school holiday">
-                    5 years, 8 months ago
-                   </a>
-                   <p class="bbp-topic-meta">
-                    <span class="bbp-topic-freshness-author">
-                     <a class="bbp-author-link" href="https://preview.lsvr.sk/townpress/forums/users/ivarotmar/" title="View ivarotmar's profile">
-                      <span class="bbp-author-avatar">
-                       <img alt="" class="avatar avatar-14 photo" height="14" loading="lazy" src="https://secure.gravatar.com/avatar/b8efbde9aa2411296e6d0243566fcbb3?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/b8efbde9aa2411296e6d0243566fcbb3?s=28&amp;d=mm&amp;r=g 2x" width="14"/>
-                      </span>
-                      <span class="bbp-author-name">
-                       ivarotmar
-                      </span>
-                     </a>
-                    </span>
-                   </p>
-                  </li>
-                 </ul>
-                 <!-- #bbp-forum-270 -->
-                 <ul class="loop-item-4 bbp-forum-status-closed bbp-forum-visibility-publish odd post-268 forum type-forum status-publish hentry" id="bbp-forum-268">
-                  <li class="bbp-forum-info">
-                   <a class="bbp-forum-title" href="https://preview.lsvr.sk/townpress/forums/forum/past-music-events/">
-                    Past Music Events
-                   </a>
-                   <div class="bbp-forum-content">
-                    Info about past music events in our town.
-                   </div>
-                  </li>
-                 
-                  <li class="bbp-forum-freshness">
-                   <a href="https://preview.lsvr.sk/townpress/forums/topic/summer-vacation-also-called-summer-holiday-or-summer-break-is-a-school-holiday/#post-320" title="Reply To: Summer vacation (also called summer holiday or summer break) is a school holiday">
-                    5 years, 8 months ago
-                   </a>
-                   <p class="bbp-topic-meta">
-                    <span class="bbp-topic-freshness-author">
-                     <a class="bbp-author-link" href="https://preview.lsvr.sk/townpress/forums/users/ivarotmar/" title="View ivarotmar's profile">
-                      <span class="bbp-author-avatar">
-                       <img alt="" class="avatar avatar-14 photo" height="14" loading="lazy" src="https://secure.gravatar.com/avatar/b8efbde9aa2411296e6d0243566fcbb3?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/b8efbde9aa2411296e6d0243566fcbb3?s=28&amp;d=mm&amp;r=g 2x" width="14"/>
-                      </span>
-                      <span class="bbp-author-name">
-                       ivarotmar
-                      </span>
-                     </a>
-                    </span>
-                   </p>
-                  </li>
+                 {% endfor %}
+                
                  </ul>
                  <!-- #bbp-forum-268 -->
                 </li>
