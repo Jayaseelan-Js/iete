@@ -11,4 +11,7 @@ urlpatterns = [
     path('galleries', views.galleries, name='galleries'),
     path('about', views.about, name='galleries'),
     path('membership', views.membership, name='membership'),
+    path('jobs', views.jobs, name='jobs'),
+    path('research', views.research, name='research'),
+    path('models', views.modeltest),
 ]
