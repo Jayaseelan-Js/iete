@@ -414,17 +414,22 @@ html, body { font-size: 16px; }
              <!-- POST ARCHIVE CATEGORIES : end -->
              <!-- POST ARCHIVE GRID : begin -->
              <div class="post-archive__grid lsvr-grid lsvr-grid--2-cols lsvr-grid--md-2-cols lsvr-grid--sm-2-cols">
-              <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
+               {% for galleries in gallery %}
+               <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
                <!-- POST : begin -->
-               <article class="post post-138 lsvr_gallery type-lsvr_gallery status-publish has-post-thumbnail hentry lsvr_gallery_cat-community lsvr_gallery_tag-festival lsvr_gallery_tag-music" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-06-large-600x360.jpg' );">
-                <div class="post__inner">
+               
+               <article class="post post-138 lsvr_gallery type-lsvr_gallery status-publish has-post-thumbnail hentry lsvr_gallery_cat-community lsvr_gallery_tag-festival lsvr_gallery_tag-music" style="background-image: url( '{{ galleries.image.url }}' );">
+                  
+                  <div class="post__inner">
+                  
                  <div class="post__bg">
                   <!-- POST HEADER : begin -->
+                  
                   <header class="post__header">
                    <!-- POST TITLE : begin -->
                    <h2 class="post__title">
                     <a class="post__title-link" href="https://preview.lsvr.sk/townpress/galleries/downtown-rock-festival/" rel="bookmark">
-                     Downtown Rock Festival
+                     {{galleries.title}}
                     </a>
                    </h2>
                    <!-- POST TITLE : end -->
@@ -436,7 +441,7 @@ html, body { font-size: 16px; }
                    <li class="post__info-item post__info-item--date" title="Published date">
                     <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
                     </span>
-                    December 2, 2018
+                    {{galleries.upload_date}}
                    </li>
                    <!-- POST DATE : end -->
                    <!-- POST CATEGORY : begin -->
@@ -445,7 +450,7 @@ html, body { font-size: 16px; }
                     </span>
                     <span class="post__terms post__terms--lsvr_gallery_cat">
                      <a class="post__term-link" href="https://preview.lsvr.sk/townpress/gallery-category/community/">
-                      Community
+                      {{galleries.image_type}}
                      </a>
                     </span>
                    </li>
@@ -467,409 +472,15 @@ html, body { font-size: 16px; }
                   </a>
                   <!-- OVERLAY LINK : end -->
                  </div>
+                 
                 </div>
+                
                </article>
+               
                <!-- POST : end -->
               </div>
-              <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
-               <!-- POST : begin -->
-               <article class="post post-136 lsvr_gallery type-lsvr_gallery status-publish has-post-thumbnail hentry lsvr_gallery_cat-community lsvr_gallery_tag-council lsvr_gallery_tag-meeting" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-03-large-600x360.jpg' );">
-                <div class="post__inner">
-                 <div class="post__bg">
-                  <!-- POST HEADER : begin -->
-                  <header class="post__header">
-                   <!-- POST TITLE : begin -->
-                   <h2 class="post__title">
-                    <a class="post__title-link" href="https://preview.lsvr.sk/townpress/galleries/town-meeting/" rel="bookmark">
-                     Town Meeting
-                    </a>
-                   </h2>
-                   <!-- POST TITLE : end -->
-                  </header>
-                  <!-- POST HEADER : end -->
-                  <!-- POST INFO : begin -->
-                  <ul class="post__info">
-                   <!-- POST DATE : begin -->
-                   <li class="post__info-item post__info-item--date" title="Published date">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
-                    </span>
-                    November 28, 2018
-                   </li>
-                   <!-- POST DATE : end -->
-                   <!-- POST CATEGORY : begin -->
-                   <li class="post__info-item post__info-item--category" title="Category">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--category">
-                    </span>
-                    <span class="post__terms post__terms--lsvr_gallery_cat">
-                     <a class="post__term-link" href="https://preview.lsvr.sk/townpress/gallery-category/community/">
-                      Community
-                     </a>
-                    </span>
-                   </li>
-                   <!-- POST CATEGORY : end -->
-                   <!-- POST IMAGES COUNT : begin -->
-                   <li class="post__info-item post__info-item--images" title="Number of images in gallery">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--images">
-                    </span>
-                    9 images
-                   </li>
-                   <!-- POST IMAGES COUNT : end -->
-                  </ul>
-                  <!-- POST INFO : end -->
-                  <!-- OVERLAY LINK : begin -->
-                  <a class="post__overlay-link" href="https://preview.lsvr.sk/townpress/galleries/town-meeting/">
-                   <span class="screen-reader-text">
-                    Open Gallery
-                   </span>
-                  </a>
-                  <!-- OVERLAY LINK : end -->
-                 </div>
-                </div>
-               </article>
-               <!-- POST : end -->
-              </div>
-              <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
-               <!-- POST : begin -->
-               <article class="post post-134 lsvr_gallery type-lsvr_gallery status-publish has-post-thumbnail hentry lsvr_gallery_cat-sport lsvr_gallery_tag-match lsvr_gallery_tag-soccer" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-10-large-600x360.jpg' );">
-                <div class="post__inner">
-                 <div class="post__bg">
-                  <!-- POST HEADER : begin -->
-                  <header class="post__header">
-                   <!-- POST TITLE : begin -->
-                   <h2 class="post__title">
-                    <a class="post__title-link" href="https://preview.lsvr.sk/townpress/galleries/friendly-soccer-match/" rel="bookmark">
-                     Friendly Soccer Match
-                    </a>
-                   </h2>
-                   <!-- POST TITLE : end -->
-                  </header>
-                  <!-- POST HEADER : end -->
-                  <!-- POST INFO : begin -->
-                  <ul class="post__info">
-                   <!-- POST DATE : begin -->
-                   <li class="post__info-item post__info-item--date" title="Published date">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
-                    </span>
-                    November 24, 2018
-                   </li>
-                   <!-- POST DATE : end -->
-                   <!-- POST CATEGORY : begin -->
-                   <li class="post__info-item post__info-item--category" title="Category">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--category">
-                    </span>
-                    <span class="post__terms post__terms--lsvr_gallery_cat">
-                     <a class="post__term-link" href="https://preview.lsvr.sk/townpress/gallery-category/sport/">
-                      Sport
-                     </a>
-                    </span>
-                   </li>
-                   <!-- POST CATEGORY : end -->
-                   <!-- POST IMAGES COUNT : begin -->
-                   <li class="post__info-item post__info-item--images" title="Number of images in gallery">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--images">
-                    </span>
-                    9 images
-                   </li>
-                   <!-- POST IMAGES COUNT : end -->
-                  </ul>
-                  <!-- POST INFO : end -->
-                  <!-- OVERLAY LINK : begin -->
-                  <a class="post__overlay-link" href="https://preview.lsvr.sk/townpress/galleries/friendly-soccer-match/">
-                   <span class="screen-reader-text">
-                    Open Gallery
-                   </span>
-                  </a>
-                  <!-- OVERLAY LINK : end -->
-                 </div>
-                </div>
-               </article>
-               <!-- POST : end -->
-              </div>
-              <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
-               <!-- POST : begin -->
-               <article class="post post-132 lsvr_gallery type-lsvr_gallery status-publish has-post-thumbnail hentry lsvr_gallery_cat-community lsvr_gallery_tag-jazz lsvr_gallery_tag-music" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-05-large-600x360.jpg' );">
-                <div class="post__inner">
-                 <div class="post__bg">
-                  <!-- POST HEADER : begin -->
-                  <header class="post__header">
-                   <!-- POST TITLE : begin -->
-                   <h2 class="post__title">
-                    <a class="post__title-link" href="https://preview.lsvr.sk/townpress/galleries/friday-jazz-night/" rel="bookmark">
-                     Friday Jazz Night
-                    </a>
-                   </h2>
-                   <!-- POST TITLE : end -->
-                  </header>
-                  <!-- POST HEADER : end -->
-                  <!-- POST INFO : begin -->
-                  <ul class="post__info">
-                   <!-- POST DATE : begin -->
-                   <li class="post__info-item post__info-item--date" title="Published date">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
-                    </span>
-                    November 18, 2018
-                   </li>
-                   <!-- POST DATE : end -->
-                   <!-- POST CATEGORY : begin -->
-                   <li class="post__info-item post__info-item--category" title="Category">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--category">
-                    </span>
-                    <span class="post__terms post__terms--lsvr_gallery_cat">
-                     <a class="post__term-link" href="https://preview.lsvr.sk/townpress/gallery-category/community/">
-                      Community
-                     </a>
-                    </span>
-                   </li>
-                   <!-- POST CATEGORY : end -->
-                   <!-- POST IMAGES COUNT : begin -->
-                   <li class="post__info-item post__info-item--images" title="Number of images in gallery">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--images">
-                    </span>
-                    9 images
-                   </li>
-                   <!-- POST IMAGES COUNT : end -->
-                  </ul>
-                  <!-- POST INFO : end -->
-                  <!-- OVERLAY LINK : begin -->
-                  <a class="post__overlay-link" href="https://preview.lsvr.sk/townpress/galleries/friday-jazz-night/">
-                   <span class="screen-reader-text">
-                    Open Gallery
-                   </span>
-                  </a>
-                  <!-- OVERLAY LINK : end -->
-                 </div>
-                </div>
-               </article>
-               <!-- POST : end -->
-              </div>
-              <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
-               <!-- POST : begin -->
-               <article class="post post-130 lsvr_gallery type-lsvr_gallery status-publish has-post-thumbnail hentry lsvr_gallery_cat-sights lsvr_gallery_tag-downtown lsvr_gallery_tag-streets" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/town-02-large-600x360.jpg' );">
-                <div class="post__inner">
-                 <div class="post__bg">
-                  <!-- POST HEADER : begin -->
-                  <header class="post__header">
-                   <!-- POST TITLE : begin -->
-                   <h2 class="post__title">
-                    <a class="post__title-link" href="https://preview.lsvr.sk/townpress/galleries/streets-of-townpress/" rel="bookmark">
-                     Streets of TownPress
-                    </a>
-                   </h2>
-                   <!-- POST TITLE : end -->
-                  </header>
-                  <!-- POST HEADER : end -->
-                  <!-- POST INFO : begin -->
-                  <ul class="post__info">
-                   <!-- POST DATE : begin -->
-                   <li class="post__info-item post__info-item--date" title="Published date">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
-                    </span>
-                    November 17, 2018
-                   </li>
-                   <!-- POST DATE : end -->
-                   <!-- POST CATEGORY : begin -->
-                   <li class="post__info-item post__info-item--category" title="Category">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--category">
-                    </span>
-                    <span class="post__terms post__terms--lsvr_gallery_cat">
-                     <a class="post__term-link" href="https://preview.lsvr.sk/townpress/gallery-category/sights/">
-                      Sights
-                     </a>
-                    </span>
-                   </li>
-                   <!-- POST CATEGORY : end -->
-                   <!-- POST IMAGES COUNT : begin -->
-                   <li class="post__info-item post__info-item--images" title="Number of images in gallery">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--images">
-                    </span>
-                    9 images
-                   </li>
-                   <!-- POST IMAGES COUNT : end -->
-                  </ul>
-                  <!-- POST INFO : end -->
-                  <!-- OVERLAY LINK : begin -->
-                  <a class="post__overlay-link" href="https://preview.lsvr.sk/townpress/galleries/streets-of-townpress/">
-                   <span class="screen-reader-text">
-                    Open Gallery
-                   </span>
-                  </a>
-                  <!-- OVERLAY LINK : end -->
-                 </div>
-                </div>
-               </article>
-               <!-- POST : end -->
-              </div>
-              <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
-               <!-- POST : begin -->
-               <article class="post post-128 lsvr_gallery type-lsvr_gallery status-publish has-post-thumbnail hentry lsvr_gallery_cat-sport lsvr_gallery_tag-marathon lsvr_gallery_tag-run" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-02-large-600x360.jpg' );">
-                <div class="post__inner">
-                 <div class="post__bg">
-                  <!-- POST HEADER : begin -->
-                  <header class="post__header">
-                   <!-- POST TITLE : begin -->
-                   <h2 class="post__title">
-                    <a class="post__title-link" href="https://preview.lsvr.sk/townpress/galleries/annual-marathon/" rel="bookmark">
-                     Annual Marathon
-                    </a>
-                   </h2>
-                   <!-- POST TITLE : end -->
-                  </header>
-                  <!-- POST HEADER : end -->
-                  <!-- POST INFO : begin -->
-                  <ul class="post__info">
-                   <!-- POST DATE : begin -->
-                   <li class="post__info-item post__info-item--date" title="Published date">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
-                    </span>
-                    November 12, 2018
-                   </li>
-                   <!-- POST DATE : end -->
-                   <!-- POST CATEGORY : begin -->
-                   <li class="post__info-item post__info-item--category" title="Category">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--category">
-                    </span>
-                    <span class="post__terms post__terms--lsvr_gallery_cat">
-                     <a class="post__term-link" href="https://preview.lsvr.sk/townpress/gallery-category/sport/">
-                      Sport
-                     </a>
-                    </span>
-                   </li>
-                   <!-- POST CATEGORY : end -->
-                   <!-- POST IMAGES COUNT : begin -->
-                   <li class="post__info-item post__info-item--images" title="Number of images in gallery">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--images">
-                    </span>
-                    9 images
-                   </li>
-                   <!-- POST IMAGES COUNT : end -->
-                  </ul>
-                  <!-- POST INFO : end -->
-                  <!-- OVERLAY LINK : begin -->
-                  <a class="post__overlay-link" href="https://preview.lsvr.sk/townpress/galleries/annual-marathon/">
-                   <span class="screen-reader-text">
-                    Open Gallery
-                   </span>
-                  </a>
-                  <!-- OVERLAY LINK : end -->
-                 </div>
-                </div>
-               </article>
-               <!-- POST : end -->
-              </div>
-              <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
-               <!-- POST : begin -->
-               <article class="post post-121 lsvr_gallery type-lsvr_gallery status-publish has-post-thumbnail hentry lsvr_gallery_cat-community lsvr_gallery_tag-camp lsvr_gallery_tag-summer" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-01-large-600x360.jpg' );">
-                <div class="post__inner">
-                 <div class="post__bg">
-                  <!-- POST HEADER : begin -->
-                  <header class="post__header">
-                   <!-- POST TITLE : begin -->
-                   <h2 class="post__title">
-                    <a class="post__title-link" href="https://preview.lsvr.sk/townpress/galleries/summer-camp-for-kids/" rel="bookmark">
-                     Summer Camp for Kids
-                    </a>
-                   </h2>
-                   <!-- POST TITLE : end -->
-                  </header>
-                  <!-- POST HEADER : end -->
-                  <!-- POST INFO : begin -->
-                  <ul class="post__info">
-                   <!-- POST DATE : begin -->
-                   <li class="post__info-item post__info-item--date" title="Published date">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
-                    </span>
-                    November 5, 2018
-                   </li>
-                   <!-- POST DATE : end -->
-                   <!-- POST CATEGORY : begin -->
-                   <li class="post__info-item post__info-item--category" title="Category">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--category">
-                    </span>
-                    <span class="post__terms post__terms--lsvr_gallery_cat">
-                     <a class="post__term-link" href="https://preview.lsvr.sk/townpress/gallery-category/community/">
-                      Community
-                     </a>
-                    </span>
-                   </li>
-                   <!-- POST CATEGORY : end -->
-                   <!-- POST IMAGES COUNT : begin -->
-                   <li class="post__info-item post__info-item--images" title="Number of images in gallery">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--images">
-                    </span>
-                    9 images
-                   </li>
-                   <!-- POST IMAGES COUNT : end -->
-                  </ul>
-                  <!-- POST INFO : end -->
-                  <!-- OVERLAY LINK : begin -->
-                  <a class="post__overlay-link" href="https://preview.lsvr.sk/townpress/galleries/summer-camp-for-kids/">
-                   <span class="screen-reader-text">
-                    Open Gallery
-                   </span>
-                  </a>
-                  <!-- OVERLAY LINK : end -->
-                 </div>
-                </div>
-               </article>
-               <!-- POST : end -->
-              </div>
-              <div class="lsvr-grid__col lsvr-grid__col--span-6 lsvr-grid__col--md-span-6 lsvr-grid__col--sm-span-6">
-               <!-- POST : begin -->
-               <article class="post post-116 lsvr_gallery type-lsvr_gallery status-publish has-post-thumbnail hentry lsvr_gallery_cat-sights lsvr_gallery_tag-nature lsvr_gallery_tag-park" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/town-05-large-600x360.jpg' );">
-                <div class="post__inner">
-                 <div class="post__bg">
-                  <!-- POST HEADER : begin -->
-                  <header class="post__header">
-                   <!-- POST TITLE : begin -->
-                   <h2 class="post__title">
-                    <a class="post__title-link" href="https://preview.lsvr.sk/townpress/galleries/townpress-state-park/" rel="bookmark">
-                     TownPress State Park
-                    </a>
-                   </h2>
-                   <!-- POST TITLE : end -->
-                  </header>
-                  <!-- POST HEADER : end -->
-                  <!-- POST INFO : begin -->
-                  <ul class="post__info">
-                   <!-- POST DATE : begin -->
-                   <li class="post__info-item post__info-item--date" title="Published date">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--date">
-                    </span>
-                    November 2, 2018
-                   </li>
-                   <!-- POST DATE : end -->
-                   <!-- POST CATEGORY : begin -->
-                   <li class="post__info-item post__info-item--category" title="Category">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--category">
-                    </span>
-                    <span class="post__terms post__terms--lsvr_gallery_cat">
-                     <a class="post__term-link" href="https://preview.lsvr.sk/townpress/gallery-category/sights/">
-                      Sights
-                     </a>
-                    </span>
-                   </li>
-                   <!-- POST CATEGORY : end -->
-                   <!-- POST IMAGES COUNT : begin -->
-                   <li class="post__info-item post__info-item--images" title="Number of images in gallery">
-                    <span aria-hidden="true" class="post__info-item-icon post__info-item-icon--images">
-                    </span>
-                    9 images
-                   </li>
-                   <!-- POST IMAGES COUNT : end -->
-                  </ul>
-                  <!-- POST INFO : end -->
-                  <!-- OVERLAY LINK : begin -->
-                  <a class="post__overlay-link" href="https://preview.lsvr.sk/townpress/galleries/townpress-state-park/">
-                   <span class="screen-reader-text">
-                    Open Gallery
-                   </span>
-                  </a>
-                  <!-- OVERLAY LINK : end -->
-                 </div>
-                </div>
-               </article>
-               <!-- POST : end -->
-              </div>
+              {% endfor %}
+              
              </div>
              <!-- POST ARCHIVE GRID : end -->
             </div>

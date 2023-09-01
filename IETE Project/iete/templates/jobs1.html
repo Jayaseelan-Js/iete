@@ -565,224 +565,30 @@ html, body { font-size: 16px; }
               </h1>
              </header>
              <!-- MAIN HEADER : end -->
+             {% for job in jobs %}
              <section class="job-area job-area-two pt-100">
                 <div class="container">
                 <div class="row">
                 <div class="col-lg-6">
                 <div class="job-item">
-                
                 <div class="job-inner align-items-center">
                 <div class="job-inner-left">
                 <h3>
-                <a href="job-details.html">UI/UX Designer</a>
+                <a href="job-details.html">{{ job.title }}</a>
                 </h3>
-                <a class="company" href="company-details.html">Winbrans.com</a>
+                <a class="company" href="company-details.html">{{ job.company_name }}</a>
                 <ul>
                 <li>
                 <i class="icofont-money-bag"></i>
-                $20k - $25k
+                {{job.salary}}
                 </li>
                 <li>
                 <i class="icofont-location-pin"></i>
-                Location 210-27 Quadra, Market Street, Victoria Canada
-                </li>
-                </ul>
-                </div>
-                <div class="job-inner-right">
-                <ul>
-                    <li>
-                        <i class="icofont-location-pin"></i>
-                            Full Time             
-                        </li>
-                <li>
-                <a href="create-account.html">Apply</a>
-                </li>
-                </ul>
-                </div>
-                </div>
-                </div>
-                </div>
-                <div class="col-lg-6">
-                <div class="job-item">
-                <div class="job-inner align-items-center">
-                <div class="job-inner-left">
-                <h3><a href="job-details.html">Android Developer</a></h3>
-                <a class="company" href="company-details.html">Infiniza.com</a>
-                <ul>
-                <li>
-                <i class="icofont-money-bag"></i>
-                $20k - $25k
+                {{job.location}}
                 </li>
                 <li>
                 <i class="icofont-location-pin"></i>
-                Location 210-27 Quadra, Market Street, Victoria Canada
-                </li>
-                </ul>
-                </div>
-                <div class="job-inner-right">
-                <ul>
-                    <li>
-                        <i class="icofont-location-pin"></i>
-                            Part Time             
-                        </li>
-                <li>
-                <a href="create-account.html">Apply</a>
-                </li>              
-                </ul>
-                </div>
-                </div>
-                </div>
-                </div>
-                <div class="col-lg-6">
-                <div class="job-item">
-                <div class="job-inner align-items-center">
-                <div class="job-inner-left">
-                <h3>
-                <a href="job-details.html">Senior Manager</a>
-                </h3>
-                <a class="company" href="company-details.html">Glovibo.com</a>
-                <ul>
-                <li>
-                <i class="icofont-money-bag"></i>
-                $20k - $25k
-                </li>
-                <li>
-                <i class="icofont-location-pin"></i>
-                Location 210-27 Quadra, Market Street, Victoria Canada
-                </li>
-                </ul>
-                </div>
-                <div class="job-inner-right">
-                <ul>
-                    <li>
-                        <i class="icofont-location-pin"></i>
-                            Intern             
-                        </li>
-                <li>
-                <a href="create-account.html">Apply</a>
-                </li>
-                </ul>
-                </div>
-                </div>
-                </div>
-                </div>
-                <div class="col-lg-6">
-                <div class="job-item ">
-                <div class="job-inner align-items-center">
-                <div class="job-inner-left">
-                <h3>
-                <a href="job-details.html">Product Designer</a>
-                </h3>
-                <a class="company" href="company-details.html">Bizotic.com</a>
-                <ul>
-                <li>
-                <i class="icofont-money-bag"></i>
-                $20k - $25k
-                </li>
-                <li>
-                <i class="icofont-location-pin"></i>
-                Location 210-27 Quadra, Market Street, Victoria Canada
-                </li>
-                </ul>
-                </div>
-                <div class="job-inner-right">
-                <ul>
-                    <li>
-                        <i class="icofont-location-pin"></i>
-                            Part Time             
-                        </li>
-                <li>
-                <a href="create-account.html">Apply</a>
-                </li>
-                </ul>
-                </div>
-                </div>
-                </div>
-                </div>
-                <div class="col-lg-6">
-                <div class="job-item">
-                <div class="job-inner align-items-center">
-                <div class="job-inner-left">
-                <h3>
-                <a href="job-details.html">Digital Marketer</a>
-                </h3>
-                <a class="company" href="company-details.html">Hotelzo.com</a>
-                <ul>
-                <li>
-                <i class="icofont-money-bag"></i>
-                $20k - $25k
-                </li>
-                <li>
-                <i class="icofont-location-pin"></i>
-                Location 210-27 Quadra, Market Street, Victoria Canada
-                </li>
-                </ul>
-                </div>
-                <div class="job-inner-right">
-                <ul>
-                    <li>
-                        <i class="icofont-location-pin"></i>
-                            Intern             
-                        </li>
-                <li>
-                <a href="create-account.html">Apply</a>
-                </li>
-                
-                </ul>
-                </div>
-                </div>
-                </div>
-                </div>
-                <div class="col-lg-6">
-                <div class="job-item">
-                <div class="job-inner align-items-center">
-                <div class="job-inner-left">
-                <h3>
-                <a href="job-details.html">Sales Manager</a>
-                </h3>
-                <a class="company" href="company-details.html">Gozuto.com</a>
-                <ul>
-                <li>
-                <i class="icofont-money-bag"></i>
-                $20k - $25k
-                </li>
-                <li>
-                <i class="icofont-location-pin"></i>
-                Location 210-27 Quadra, Market Street, Victoria Canada
-                </li>
-                </ul>
-                </div>
-                <div class="job-inner-right">
-                <ul>
-                    <li>
-                        <i class="icofont-location-pin"></i>
-                            Part Time             
-                        </li>
-                <li>
-                <a href="create-account.html">Apply</a>
-                </li>
-                
-                </ul>
-                </div>
-                </div>
-                </div>
-                </div>
-                <div class="col-lg-6">
-                <div class="job-item">
-                <div class="job-inner align-items-center">
-                <div class="job-inner-left">
-                <h3>
-                <a href="job-details.html">Web Developer</a>
-                </h3>
-                <a class="company" href="company-details.html">Udiza.com</a>
-                <ul>
-                <li>
-                <i class="icofont-money-bag"></i>
-                $20k - $25k
-                </li>
-                <li>
-                <i class="icofont-location-pin"></i>
-                Location 210-27 Quadra, Market Street, Victoria Canada
+                {{job.posted_date|timesince}} ago
                 </li>
                 </ul>
                 </div>
@@ -790,53 +596,18 @@ html, body { font-size: 16px; }
                 <ul>
                 <li>
                 <i class="icofont-location-pin"></i>
-                    Full Time             
+                {{job.job_type}}             
                 </li>
                 <li>
                 <a href="create-account.html">Apply</a>
                 </li>
-                
                 </ul>
-                </div>
-                </div>
-                </div>
-                </div>
-                <div class="col-lg-6">
-                <div class="job-item">
-                <div class="job-inner align-items-center">
-                <div class="job-inner-left">
-                <h3>
-                <a href="job-details.html">SEO</a>
-                </h3>
-                <a class="company" href="company-details.html">Oqota.com</a>
-                <ul>
-                <li>
-                <i class="icofont-money-bag"></i>
-                $20k - $25k
-                </li>
-                <li>
-                <i class="icofont-location-pin"></i>
-                Location 210-27 Quadra, Market Street, Victoria Canada
-                </li>
-                </ul>
-                </div>
-                <div class="job-inner-right">
-                <ul>
-                    <li>
-                        <span>Part Time</span>
-                        </li>
-                <li>
-                <a href="create-account.html">Apply</a>
-                </li>
-                
-                </ul>
-                </div>
-                </div>
                 </div>
                 </div>
                 </div>
                 </div>
                 </section>
+                {% endfor %}
                 
             
              <!-- POST : end -->

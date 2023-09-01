@@ -50,10 +50,37 @@ class Education(models.Model):
 class Research(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    date = models.DateField()
+    created_at = models.DateField()
     genere = models.TextField(max_length=50)
     image = models.ImageField(upload_to='research_images/', blank=True, null=True)
    
 
     def __str__(self):
         return self.title
+    
+
+class Job(models.Model):
+    title = models.CharField(max_length=255)
+    company_name = models.CharField(max_length=255)
+    location = models.CharField(max_length=255)
+    posted_date = models.DateField(auto_now_add=True)
+    salary = models.TextField(max_length=20)
+    job_type = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.title
+    
+def gallery_image_upload_to(instance, filename):
+    return f'gallery/{instance.title}/{filename}'
+
+class GalleryImage(models.Model):
+    title = models.CharField(max_length=255)
+    image = models.ImageField(upload_to=gallery_image_upload_to)
+    description = models.TextField()
+    upload_date = models.DateTimeField(auto_now_add=True)
+    gallerty_type = models.TextField(max_length=20, default='default')
+
+    def __str__(self):
+        return self.title
+
+

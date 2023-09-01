@@ -600,7 +600,7 @@
                       <div class="lsvr-townpress-posts__post-inner">
                        <header class="lsvr-townpress-posts__post-header">
                         <p class="lsvr-townpress-posts__post-thumbnail">
-                         <a class="lsvr-townpress-posts__post-thumbnail-link" href="https://preview.lsvr.sk/townpress/report-from-friendly-soccer-match-between-townpress-and-pressville/" style="background-image: url( 'https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/article-10-large.jpg' );">
+                         <a class="lsvr-townpress-posts__post-thumbnail-link" href="https://preview.lsvr.sk/townpress/report-from-friendly-soccer-match-between-townpress-and-pressville/" style="background-image: url( '{{ news.image.url }}' );">
                           <span class="screen-reader-text">
                            article-10-large
                           </span>
@@ -608,12 +608,12 @@
                         </p>
                         <h3 class="lsvr-townpress-posts__post-title">
                          <a class="lsvr-townpress-posts__post-title-link" href="https://preview.lsvr.sk/townpress/report-from-friendly-soccer-match-between-townpress-and-pressville/" rel="bookmark">
-                          Report from Friendly Soccer Match Between TownPress and Pressville
+                          {{news.title}}
                          </a>
                         </h3>
                         <p class="lsvr-townpress-posts__post-meta">
                          <span class="lsvr-townpress-posts__post-meta-date" role="group">
-                          July 1, 2021
+                          {{news.pub_date}}
                          </span>
                          <span class="lsvr-townpress-posts__post-meta-categories" role="group">
                           <span class="post__terms">
@@ -627,7 +627,7 @@
                        </header>
                        <div class="lsvr-townpress-posts__post-content">
                         <p>
-                         Football refers to a number of sports that involve, to varying degrees, kicking a ball with the foot to score a goal. Unqualified, the word football is understood to refer to whichever form of football is the most popular.
+                        {{news.content}} 
                         </p>
                         <p class="lsvr-townpress-posts__post-permalink">
                          <a class="lsvr-townpress-posts__post-permalink-link" href="https://preview.lsvr.sk/townpress/report-from-friendly-soccer-match-between-townpress-and-pressville/" rel="bookmark">

@@ -1,3 +1,4 @@
+{% load static %}
 <html lang="en-US">
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
@@ -416,25 +417,33 @@ html, body { font-size: 16px; }
 
                 <!-- Wrap Navigation Tabs -->
                 
-    
+                
                 <!-- Tabs Content -->
-                <div class="tab-content">
-                    <div id="all64f02f7ad5339" class="tab-pane fade in active">
-                <div class="news_tabs_item_lg clearfix"><div class="news_tabs_image"><a class="news_tabs_media" href="http://webdesign-finder.com/scientist/2016/08/22/audio-post-format/"><span class="overlay"></span><img class="scientist-top-news-3-2" src="http://webdesign-finder.com/scientist/wp-content/uploads/2016/08/38-640x426.jpg" alt="#"></a><div class="widget_recent_post_category cat-links"><a href="http://webdesign-finder.com/scientist/category/science/">SCIENCE</a></div></div><div class="news_tabs_content"><h3 class="news_tabs_title"><a href="http://webdesign-finder.com/scientist/2016/08/22/audio-post-format/">Audio Post Format</a></h3><div class="post_meta clearfix"><span class="post_date">August 22, 2016</span></div><p>
-    This Is Audio Post Format
-    
-    The term “artificial intelligence” (AI) can be a controversial...</p></div></div>
-                <div class="news_tabs_item_lg clearfix"><div class="news_tabs_image"><a class="news_tabs_media" href="http://webdesign-finder.com/scientist/2016/08/22/video-post/"><span class="overlay"></span><img class="scientist-top-news-3-2" src="http://webdesign-finder.com/scientist/wp-content/uploads/2016/08/21-640x426.jpg" alt="#"></a><div class="widget_recent_post_category cat-links"><a href="http://webdesign-finder.com/scientist/category/research/">RESEARCH</a></div></div><div class="news_tabs_content"><h3 class="news_tabs_title"><a href="http://webdesign-finder.com/scientist/2016/08/22/video-post/">Video Post Format</a></h3><div class="post_meta clearfix"><span class="post_date">August 22, 2016</span></div><p>
-    This Is Video Post Format video but as these machines become more and more advanced, a new...</p></div></div>
-                <div class="news_tabs_item_lg clearfix"><div class="news_tabs_image"><a class="news_tabs_media" href="http://webdesign-finder.com/scientist/2016/08/22/revai-startup-prolongs-viability-of-intestines-for-transplant/"><span class="overlay"></span><img class="scientist-top-news-3-2" src="http://webdesign-finder.com/scientist/wp-content/uploads/2016/08/33-640x426.jpg" alt="#"></a><div class="widget_recent_post_category cat-links"><a href="http://webdesign-finder.com/scientist/category/research/">RESEARCH</a></div></div><div class="news_tabs_content"><h3 class="news_tabs_title"><a href="http://webdesign-finder.com/scientist/2016/08/22/revai-startup-prolongs-viability-of-intestines-for-transplant/">Revai Startup Prolongs Viability</a></h3><div class="post_meta clearfix"><span class="post_date">August 22, 2016</span></div><p>“It’s the first time we have something new for this particular organ,” Geibel said.
-    
-    Revai...</p></div></div>
-                <div class="news_tabs_item_lg clearfix"><div class="news_tabs_image"><a class="news_tabs_media" href="http://webdesign-finder.com/scientist/2016/08/22/how-to-detect-a-troubled-heart/"><span class="overlay"></span><img class="scientist-top-news-3-2" src="http://webdesign-finder.com/scientist/wp-content/uploads/2016/08/30-640x426.jpg" alt="#"></a><div class="widget_recent_post_category cat-links"><a href="http://webdesign-finder.com/scientist/category/science/">SCIENCE</a></div></div><div class="news_tabs_content"><h3 class="news_tabs_title"><a href="http://webdesign-finder.com/scientist/2016/08/22/how-to-detect-a-troubled-heart/">How to Detect a Troubled Heart</a></h3><div class="post_meta clearfix"><span class="post_date">August 22, 2016</span></div><p>After successful testing with animal models, Campbell showed that human cells can be used to grow...</p></div></div>
-                <div class="news_tabs_item_lg clearfix"><div class="news_tabs_image"><a class="news_tabs_media" href="http://webdesign-finder.com/scientist/2016/08/22/keeping-the-noise-level-down/"><span class="overlay"></span><img class="scientist-top-news-3-2" src="http://webdesign-finder.com/scientist/wp-content/uploads/2016/08/39-640x426.jpg" alt="#"></a><div class="widget_recent_post_category cat-links"><a href="http://webdesign-finder.com/scientist/category/research/">RESEARCH</a></div></div><div class="news_tabs_content"><h3 class="news_tabs_title"><a href="http://webdesign-finder.com/scientist/2016/08/22/keeping-the-noise-level-down/">Keeping the Noise Level Down</a></h3><div class="post_meta clearfix"><span class="post_date">August 22, 2016</span></div><p>In collaboration with nine other Yale researchers, Devoret recently published a paper inNature that...</p></div></div>
-                <div class="news_tabs_item_lg clearfix"><div class="news_tabs_image"><a class="news_tabs_media" href="http://webdesign-finder.com/scientist/2016/08/22/unsolved-mysteries-the-mpemba-effect/"><span class="overlay"></span><img class="scientist-top-news-3-2" src="http://webdesign-finder.com/scientist/wp-content/uploads/2016/08/36-640x426.jpg" alt="#"></a><div class="widget_recent_post_category cat-links"><a href="http://webdesign-finder.com/scientist/category/space-physics/">SPACE &amp; PHYSICS</a></div></div><div class="news_tabs_content"><h3 class="news_tabs_title"><a href="http://webdesign-finder.com/scientist/2016/08/22/unsolved-mysteries-the-mpemba-effect/">Unsolved Mysteries: The Mpemba Effect</a></h3><div class="post_meta clearfix"><span class="post_date">August 22, 2016</span></div><p>Soon after this incident Dr. Denis Osborne, a physics professor, visited Mpemba’s school. He did...</p></div></div></div><div id="mind-brain64f02f7ad5339" class="tab-pane fade in">
-                <div class="news_tabs_loading fade in">
-                    <div class="spinner"></div>
-                </div></div>
+              <div class="tab-content">
+              <div id="all64f02f7ad5339" class="tab-pane fade in active">
+              {% for researchs in research %}
+              <div class="news_tabs_item_lg clearfix">
+                <div class="news_tabs_image">
+                  <a class="news_tabs_media" href="http://webdesign-finder.com/scientist/2016/08/22/audio-post-format/">
+                  <span class="overlay"></span><img class="scientist-top-news-3-2" src="{{ researchs.image.url }}" alt="{{ researchs.title}}"></a>
+                  <div class="widget_recent_post_category cat-links">
+                  <a href="http://webdesign-finder.com/scientist/category/science/">{{researchs.genere}}</a>
+                  </div>
+                </div>
+                <div class="news_tabs_content"><h3 class="news_tabs_title">
+                    <a href="#">{{researchs.title}}</a>
+                  </h3>
+                  <div class="post_meta clearfix">
+                    <span class="post_date">{{researchs.created_at}}</span>
+                  </div>
+                  <p>
+                  {{researchs.description}}...</p>
+                </div>
+               
+                </div>
+                {% endfor %}
+                
+               </div>
     <div id="science64f02f7ad5339" class="tab-pane fade in">
                 <div class="news_tabs_loading fade in">
                     <div class="spinner"></div>

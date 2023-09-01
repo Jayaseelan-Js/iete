@@ -14,4 +14,5 @@ urlpatterns = [
     path('jobs', views.jobs, name='jobs'),
     path('research', views.research, name='research'),
     path('models', views.modeltest),
+    path('news_detail/<int:pk>/', views.news_detail, name='news_detail'),
 ]

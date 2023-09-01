@@ -417,7 +417,7 @@ html, body { font-size: 16px; }
                      <header class="post__header">
                          <!-- POST THUMBNAIL : begin -->
                          <p class="post__thumbnail post__thumbnail--cropped">
-                             <a class="post__thumbnail-link post__thumbnail-link--cropped" href="{{ article.url }}" style="background-image: url('{{ article.image.url }}'); background-size: contain; background-repeat: no-repeat;">
+                             <a class="post__thumbnail-link post__thumbnail-link--cropped" href="{% url 'news_detail' article.pk %}" style="background-image: url('{{ article.image.url }}'); background-size: contain; background-repeat: no-repeat;">
                                  <span class="screen-reader-text">
                                      {{ article.title }}
                                  </span>
@@ -426,7 +426,7 @@ html, body { font-size: 16px; }
                          <!-- POST THUMBNAIL : end -->
                          <!-- POST TITLE : begin -->
                          <h2 class="post__title">
-                             <a class="post__title-link" href="{{ article.url }}" rel="bookmark">
+                             <a class="post__title-link" href="{% url 'news_detail' article.pk %}" rel="bookmark">
                                  {{ article.title }}
                              </a>
                          </h2>
@@ -620,9 +620,7 @@ html, body { font-size: 16px; }
                  </nav>
                 </div>
                </div>
-              </div>
-            
-            
+              </div>   
           </aside>
           <!-- LEFT SIDEBAR : end -->
          </div>
