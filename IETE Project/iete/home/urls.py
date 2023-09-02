@@ -14,5 +14,7 @@ urlpatterns = [
     path('jobs', views.jobs, name='jobs'),
     path('research', views.research, name='research'),
     path('models', views.modeltest),
-    path('news_detail/<int:pk>/', views.news_detail, name='news_detail'),
+    path('news_detail/<int:pk>/', views.news_land, name='news_detail'),
+    path('login', views.admin_login, name='login'),
+    path('add-news', views.create_news, name="add news"),
 ]

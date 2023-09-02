@@ -2,7 +2,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="pingback" href="https://preview.lsvr.sk/townpress/xmlrpc.php">
-    <title>Report from Friendly Soccer Match Between TownPress and Pressville – TownPress</title>
+    <title>{{news.title}}</title>
 <meta name="robots" content="max-image-preview:large">
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="dns-prefetch" href="//s.w.org">
@@ -326,7 +326,7 @@ html, body { font-size: 16px; }
 					<div class="c-content-box">	
 	<!-- POST THUMBNAIL : begin -->
 	<p class="post__thumbnail">
-		<img width="2000" height="1200" src="{{ news.image.url }}" class="attachment-full size-full wp-post-image" alt="{{news.title}}">
+		<img width="200" height="120" src="{{ news.image.url }}" class="attachment-full size-full wp-post-image" alt="{{news.title}}">
     </p>
 	<!-- POST THUMBNAIL : end -->					
 	<!-- POST TEXT : begin -->
@@ -407,26 +407,18 @@ html, body { font-size: 16px; }
 		<div class="c-content-box">
 
 			<ul class="post-navigation__list">
-
-				
-				
+	
 					<!-- NEXT POST : begin -->
-					<li class="post-navigation__next">
-						<div class="post-navigation__next-inner">
-
-							<h6 class="post-navigation__title">
-								<a href="https://preview.lsvr.sk/townpress/new-housing-complex-in-townpress-nearly-complete/" class="post-navigation__title-link">
-									Next								</a>
-							</h6>
-
-							<a href="https://preview.lsvr.sk/townpress/new-housing-complex-in-townpress-nearly-complete/" class="post-navigation__link">
-								New Housing Complex in TownPress Nearly Complete							</a>
-
-						</div>
-					</li>
+			<li>
+				{% if next_news %}
+				<h4>Next News</h4>
+				<a href="{% url 'news_detail' pk=next_news.id %}">{{ next_news.title }}</a>
+				{% else %}
+				<h4>No more news</h4>
+				{% endif %}
+			</li>
 					<!-- NEXT POST : end -->
 
-				
 			</ul>
 
 		</div>
@@ -706,7 +698,6 @@ html, body { font-size: 16px; }
 
 	                    
 					</p>
-
     			</li>
 
     		

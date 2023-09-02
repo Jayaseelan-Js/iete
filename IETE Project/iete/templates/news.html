@@ -32,6 +32,30 @@ html, body { font-size: 16px; }
   <link href="https://preview.lsvr.sk/townpress/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
   <link href="https://preview.lsvr.sk/townpress/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
   <meta content="WordPress 6.0.5" name="generator"/>
+  <style>
+.add-news-button {
+position: absolute;
+top: 0;
+right: 0;
+margin: 20px;
+}
+.custom-button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.custom-button:hover {
+    background-color: #e65500;
+}
+
+
+
+  </style>
  </head>
  <body class="blog wp-custom-logo lsvr-accessibility" data-rsssl="1">
   <svg focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewbox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg">
@@ -407,6 +431,9 @@ html, body { font-size: 16px; }
               <h1 class="main__title">
                News
               </h1>
+              <div class="add-news-button">
+                <a href="/add-news"  class="custom-button">Add News</a>
+            </div>
              </header>
              <!-- MAIN HEADER : end -->
              <!-- POST ARCHIVE CATEGORIES : begin -->
