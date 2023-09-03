@@ -4,7 +4,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <link href="https://preview.lsvr.sk/townpress/xmlrpc.php" rel="pingback"/>
   <title>
-   Notices – TownPress
+   About Us
   </title>
   <meta content="max-image-preview:large" name="robots"/>
   <link href="//fonts.googleapis.com" rel="dns-prefetch"/>
@@ -217,7 +217,11 @@ html, body { font-size: 16px; }
 .features .icon-box:hover h3 a {
   color: #5fcf80;
 }
-
+.header-logo__image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px; 
+    }
 
 
   </style>
@@ -405,11 +409,11 @@ html, body { font-size: 16px; }
       <div class="lsvr-container">
        <div class="header__content-inner">
         <!-- HEADER BRANDING : begin -->
-        <div class="header-logo">
-         <a aria-label="Site logo" class="header-logo__link" href="https://preview.lsvr.sk/townpress/">
-          <img alt="TownPress" class="header-logo__image" src="https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/header-logo.2x.png"/>
-         </a>
-        </div>
+        <div class="header-logo header-logo--front">
+          <a aria-label="Site logo" class="header-logo__link" href="/">
+           <img alt="logo" class="header-logo__image" src="{{ logo.image.url }}">
+          </a>
+         </div>
         <!-- HEADER BRANDING : end -->
         <!-- HEADER TOOLBAR TOGGLE : begin -->
         <div class="header-toolbar-toggle">
@@ -558,9 +562,9 @@ html, body { font-size: 16px; }
    </header>
    <!-- HEADER : end -->
    <div class="header-background header-background--single" data-slideshow-speed="10">
-    <div class="header-background__image header-background__image--default" style="background-image: url('https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/header-01.2.jpg'); ">
+    <div class="header-background__image header-background__image--default" style="background-image: url('{{ images.image.url }}');">
     </div>
-   </div>
+  </div>
    <!-- CORE : begin -->
    <div id="core">
     <div class="core__inner">
@@ -865,129 +869,127 @@ html, body { font-size: 16px; }
           </main>
           <!-- MAIN : end -->
          </div>
-         <div class="columns__sidebar columns__sidebar--left lsvr-grid__col lsvr-grid__col--span-3 lsvr-grid__col--pull-6">
+        <div class="columns__sidebar columns__sidebar--left lsvr-grid__col lsvr-grid__col--span-3 lsvr-grid__col--pull-6">
           <!-- LEFT SIDEBAR : begin -->
           <aside id="sidebar-left">
-           <div class="sidebar-left__inner">
-            <div class="widget lsvr-townpress-menu-widget" id="lsvr_townpress_menu-2">
-             <div class="widget__inner">
-              <div class="widget__content">
-               <nav aria-label="Main Menu" class="lsvr-townpress-menu-widget__nav lsvr-townpress-menu-widget__nav--expanded-active" data-label-collapse-submenu="Collapse submenu" data-label-expand-submenu="Expand submenu">
-                <ul class="lsvr-townpress-menu-widget__list" id="menu-main-menu-1" role="menu">
-                 <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-207 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children" id="lsvr-townpress-menu-widget__item-226-792" role="presentation">
-                  <a aria-controls="lsvr-townpress-menu-widget__submenu-226-792" aria-expanded="false" aria-haspopup="true" aria-owns="lsvr-townpress-menu-widget__submenu-226-792" class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="/" id="lsvr-townpress-menu-widget__item-link-226-792" role="menuitem">
-                   <span class="lsvr-townpress-menu-widget__item-link-label">
-                    Home
-                   </span>
-                  </a>
-                  <button aria-controls="lsvr-townpress-menu-widget__submenu-226-792" aria-expanded="false" aria-haspopup="true" aria-label="Expand submenu" class="lsvr-townpress-menu-widget__toggle lsvr-townpress-menu-widget__toggle--level-0" type="button">
-                   <span aria-hidden="true" class="lsvr-townpress-menu-widget__toggle-icon">
-                   </span>
-                  </button>
+            <div class="sidebar-left__inner">
+             <div class="widget lsvr-townpress-menu-widget" id="lsvr_townpress_menu-2">
+              <div class="widget__inner">
+               <div class="widget__content">
+                <nav aria-label="Main Menu" class="lsvr-townpress-menu-widget__nav lsvr-townpress-menu-widget__nav--expanded-active" data-label-collapse-submenu="Collapse submenu" data-label-expand-submenu="Expand submenu">
+                 <ul class="lsvr-townpress-menu-widget__list" id="menu-main-menu-1" role="menu">
+                  <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-207 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children" id="lsvr-townpress-menu-widget__item-226-792" role="presentation">
+                   <a aria-controls="lsvr-townpress-menu-widget__submenu-226-792" aria-expanded="false" aria-haspopup="true" aria-owns="lsvr-townpress-menu-widget__submenu-226-792" class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="#@" id="lsvr-townpress-menu-widget__item-link-226-792" role="menuitem">
+                    <span class="lsvr-townpress-menu-widget__item-link-label">
+                     Home
+                    </span>
+                   </a>
+                   <button aria-controls="lsvr-townpress-menu-widget__submenu-226-792" aria-expanded="false" aria-haspopup="true" aria-label="Expand submenu" class="lsvr-townpress-menu-widget__toggle lsvr-townpress-menu-widget__toggle--level-0" type="button">
+                    <span aria-hidden="true" class="lsvr-townpress-menu-widget__toggle-icon">
+                    </span>
+                   </button>
+                   
+                  <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-post_type menu-item-object-page" id="lsvr-townpress-menu-widget__item-222-825" role="presentation">
+                   <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="/news" id="lsvr-townpress-menu-widget__item-link-222-825" role="menuitem">
+                    <span class="lsvr-townpress-menu-widget__item-link-label">
+                     News
+                    </span>
+                   </a>
+                  </li>
+                  <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-custom menu-item-object-custom" id="lsvr-townpress-menu-widget__item-229-606" role="presentation">
+                   <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="membership" id="lsvr-townpress-menu-widget__item-link-229-606" role="menuitem">
+                    <span class="lsvr-townpress-menu-widget__item-link-label">
+                     Membership
+                    </span>
+                   </a>
+                  </li>
+                  <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-custom menu-item-object-custom" id="lsvr-townpress-menu-widget__item-230-758" role="presentation">
+                   <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="publications" id="lsvr-townpress-menu-widget__item-link-230-758" role="menuitem">
+                    <span class="lsvr-townpress-menu-widget__item-link-label">
+                     Publications
+                    </span>
+                   </a>
+                  </li>
+                  <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-custom menu-item-object-custom" id="lsvr-townpress-menu-widget__item-231-417" role="presentation">
+                   <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="event" id="lsvr-townpress-menu-widget__item-link-231-417" role="menuitem">
+                    <span class="lsvr-townpress-menu-widget__item-link-label">
+                     Events and Conferences
+                    </span>
+                   </a>
+                  </li>
+                  <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-custom menu-item-object-custom" id="lsvr-townpress-menu-widget__item-232-62" role="presentation">
+                   <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="education" id="lsvr-townpress-menu-widget__item-link-232-62" role="menuitem">
+                    <span class="lsvr-townpress-menu-widget__item-link-label">
+                     Education and Training
+                    </span>
+                   </a>
+                  </li>
+                  <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-custom menu-item-object-custom" id="lsvr-townpress-menu-widget__item-233-2" role="presentation">
+                   <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="research" id="lsvr-townpress-menu-widget__item-link-233-2" role="menuitem">
+                    <span class="lsvr-townpress-menu-widget__item-link-label">
+                     Research and Innovation
+                    </span>
+                   </a>
+                  </li>
                   
-                 <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-post_type menu-item-object-page" id="lsvr-townpress-menu-widget__item-222-825" role="presentation">
-                  <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="news" id="lsvr-townpress-menu-widget__item-link-222-825" role="menuitem">
-                   <span class="lsvr-townpress-menu-widget__item-link-label">
-                    News
-                   </span>
-                  </a>
-                 </li>
-                 <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-custom menu-item-object-custom" id="lsvr-townpress-menu-widget__item-229-606" role="presentation">
-                  <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="membership" id="lsvr-townpress-menu-widget__item-link-229-606" role="menuitem">
-                   <span class="lsvr-townpress-menu-widget__item-link-label">
-                    Membership
-                   </span>
-                  </a>
-                 </li>
-                 <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-custom menu-item-object-custom" id="lsvr-townpress-menu-widget__item-230-758" role="presentation">
-                  <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="publications" id="lsvr-townpress-menu-widget__item-link-230-758" role="menuitem">
-                   <span class="lsvr-townpress-menu-widget__item-link-label">
-                    Publications
-                   </span>
-                  </a>
-                 </li>
-                 <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-custom menu-item-object-custom" id="lsvr-townpress-menu-widget__item-231-417" role="presentation">
-                  <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="event" id="lsvr-townpress-menu-widget__item-link-231-417" role="menuitem">
-                   <span class="lsvr-townpress-menu-widget__item-link-label">
-                    Events and Conferences
-                   </span>
-                  </a>
-                 </li>
-                 <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-custom menu-item-object-custom" id="lsvr-townpress-menu-widget__item-232-62" role="presentation">
-                  <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="education" id="lsvr-townpress-menu-widget__item-link-232-62" role="menuitem">
-                   <span class="lsvr-townpress-menu-widget__item-link-label">
-                    Education and Training
-                   </span>
-                  </a>
-                 </li>
-                 <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-custom menu-item-object-custom" id="lsvr-townpress-menu-widget__item-233-2" role="presentation">
-                  <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="research" id="lsvr-townpress-menu-widget__item-link-233-2" role="menuitem">
-                   <span class="lsvr-townpress-menu-widget__item-link-label">
-                    Research and Innovation
-                   </span>
-                  </a>
-                 </li>
-                 
-                 <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-custom menu-item-object-custom" id="lsvr-townpress-menu-widget__item-343-8" role="presentation">
-                  <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="jobs" id="lsvr-townpress-menu-widget__item-link-343-8" role="menuitem">
-                   <span class="lsvr-townpress-menu-widget__item-link-label">
-                    Career Center
-                   </span>
-                  </a>
-                 </li>
-                 <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" id="lsvr-townpress-menu-widget__item-223-853" role="presentation">
-                  <a aria-controls="lsvr-townpress-menu-widget__submenu-223-853" aria-expanded="false" aria-haspopup="true" aria-owns="lsvr-townpress-menu-widget__submenu-223-853" class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="#" id="lsvr-townpress-menu-widget__item-link-223-853" role="menuitem">
-                   <span class="lsvr-townpress-menu-widget__item-link-label">
-                    More
-                   </span>
-                  </a>
-                  <button aria-controls="lsvr-townpress-menu-widget__submenu-223-853" aria-expanded="false" aria-haspopup="true" aria-label="Expand submenu" class="lsvr-townpress-menu-widget__toggle lsvr-townpress-menu-widget__toggle--level-0" type="button">
-                   <span aria-hidden="true" class="lsvr-townpress-menu-widget__toggle-icon">
-                   </span>
-                  </button>
-                  <ul aria-expanded="false" aria-labelledby="lsvr-townpress-menu-widget__item-link-223-853" class="lsvr-townpress-menu-widget__submenu lsvr-townpress-menu-widget__submenu--level-0" id="lsvr-townpress-menu-widget__submenu-223-853" role="menu">
-                   <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-1 menu-item menu-item-type-post_type menu-item-object-page" id="lsvr-townpress-menu-widget__item-451-837" role="presentation">
-                    <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-1" href="about" id="lsvr-townpress-menu-widget__item-link-451-837" role="menuitem">
-                     <span class="lsvr-townpress-menu-widget__item-link-label">
-                      About us
-                     </span>
-                    </a>
-                   </li>
-                   <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-1 menu-item menu-item-type-post_type menu-item-object-page" id="lsvr-townpress-menu-widget__item-452-825" role="presentation">
-                    <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-1" href="galleries" id="lsvr-townpress-menu-widget__item-link-452-825" role="menuitem">
-                     <span class="lsvr-townpress-menu-widget__item-link-label">
-                      Gallery
-                     </span>
-                    </a>
-                   </li>
-                   <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-1 menu-item menu-item-type-post_type menu-item-object-page" id="lsvr-townpress-menu-widget__item-228-605" role="presentation">
-                    <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-1" href="blogs" id="lsvr-townpress-menu-widget__item-link-228-605" role="menuitem">
-                     <span class="lsvr-townpress-menu-widget__item-link-label">
-                      Blogs
-                     </span>
-                    </a>
-                   </li>
-    
-                   <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-1 menu-item menu-item-type-custom menu-item-object-custom" id="lsvr-townpress-menu-widget__item-266-790" role="presentation">
-                    <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-1" href="404" id="lsvr-townpress-menu-widget__item-link-266-790" role="menuitem">
-                     <span class="lsvr-townpress-menu-widget__item-link-label">
-                      Error 404
-                     </span>
-                    </a>
-                   </li>
-                  </ul>
-                 </li>
-                </ul>
-               </nav>
+                  <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-custom menu-item-object-custom" id="lsvr-townpress-menu-widget__item-343-8" role="presentation">
+                   <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="jobs" id="lsvr-townpress-menu-widget__item-link-343-8" role="menuitem">
+                    <span class="lsvr-townpress-menu-widget__item-link-label">
+                     Career Center
+                    </span>
+                   </a>
+                  </li>
+                  <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" id="lsvr-townpress-menu-widget__item-223-853" role="presentation">
+                   <a aria-controls="lsvr-townpress-menu-widget__submenu-223-853" aria-expanded="false" aria-haspopup="true" aria-owns="lsvr-townpress-menu-widget__submenu-223-853" class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-0" href="#" id="lsvr-townpress-menu-widget__item-link-223-853" role="menuitem">
+                    <span class="lsvr-townpress-menu-widget__item-link-label">
+                     More
+                    </span>
+                   </a>
+                   <button aria-controls="lsvr-townpress-menu-widget__submenu-223-853" aria-expanded="false" aria-haspopup="true" aria-label="Expand submenu" class="lsvr-townpress-menu-widget__toggle lsvr-townpress-menu-widget__toggle--level-0" type="button">
+                    <span aria-hidden="true" class="lsvr-townpress-menu-widget__toggle-icon">
+                    </span>
+                   </button>
+                   <ul aria-expanded="false" aria-labelledby="lsvr-townpress-menu-widget__item-link-223-853" class="lsvr-townpress-menu-widget__submenu lsvr-townpress-menu-widget__submenu--level-0" id="lsvr-townpress-menu-widget__submenu-223-853" role="menu">
+                    <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-1 menu-item menu-item-type-post_type menu-item-object-page" id="lsvr-townpress-menu-widget__item-451-837" role="presentation">
+                     <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-1" href="about" id="lsvr-townpress-menu-widget__item-link-451-837" role="menuitem">
+                      <span class="lsvr-townpress-menu-widget__item-link-label">
+                       About us
+                      </span>
+                     </a>
+                    </li>
+                    <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-1 menu-item menu-item-type-post_type menu-item-object-page" id="lsvr-townpress-menu-widget__item-452-825" role="presentation">
+                     <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-1" href="galleries" id="lsvr-townpress-menu-widget__item-link-452-825" role="menuitem">
+                      <span class="lsvr-townpress-menu-widget__item-link-label">
+                       Gallery
+                      </span>
+                     </a>
+                    </li>
+                    <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-1 menu-item menu-item-type-post_type menu-item-object-page" id="lsvr-townpress-menu-widget__item-228-605" role="presentation">
+                     <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-1" href="https://preview.lsvr.sk/townpress/typography/" id="lsvr-townpress-menu-widget__item-link-228-605" role="menuitem">
+                      <span class="lsvr-townpress-menu-widget__item-link-label">
+                       Blogs
+                      </span>
+                     </a>
+                    </li>
+           
+                    <li class="lsvr-townpress-menu-widget__item lsvr-townpress-menu-widget__item--level-1 menu-item menu-item-type-custom menu-item-object-custom" id="lsvr-townpress-menu-widget__item-266-790" role="presentation">
+                     <a class="lsvr-townpress-menu-widget__item-link lsvr-townpress-menu-widget__item-link--level-1" href="https://preview.lsvr.sk/townpress/404" id="lsvr-townpress-menu-widget__item-link-266-790" role="menuitem">
+                      <span class="lsvr-townpress-menu-widget__item-link-label">
+                       Error 404
+                      </span>
+                     </a>
+                    </li>
+                   </ul>
+                  </li>
+                 </ul>
+                </nav>
+               </div>
               </div>
              </div>
+             
+            
             </div>
-             </div>
-            </div>
-           </div>
-          </div>
-         </div>
-        </aside>
+           </aside>
         <!-- LEFT SIDEBAR : end -->
        </div>
          <div class="columns__sidebar columns__sidebar--right lsvr-grid__col lsvr-grid__col--span-3">
@@ -1025,7 +1027,7 @@ html, body { font-size: 16px; }
            <div class="widget widget_text" id="text-2">
             <div class="widget__inner">
              <h3 class="widget__title">
-              About TownPress
+              About IETE
              </h3>
              <div class="textwidget">
               <p>

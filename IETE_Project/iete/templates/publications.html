@@ -24,6 +24,11 @@
    body, input, textarea, select, button, #cancel-comment-reply-link, .lsvr_listing-map__infobox { font-family: 'Source Sans Pro', Arial, sans-serif; }
 html, body { font-size: 16px; }
 .header-logo { max-width: 140px; } .header-logo--front { max-width: 200px; } @media ( max-width: 991px ) { .header-logo { max-width: 140px; } }
+.header-logo__image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px; 
+    }
   </style>
   <link href="https://preview.lsvr.sk/townpress/wp-content/themes/townpress-demo/style.css?ver=3.0.3" id="lsvr-townpress-demo-style-css" media="all" rel="stylesheet" type="text/css"/>
   <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C400italic%2C600%2C600italic%2C700%2C700italic&amp;ver=6.0.5" id="lsvr-townpress-google-fonts-css" media="all" rel="stylesheet" type="text/css"/>
@@ -216,11 +221,11 @@ html, body { font-size: 16px; }
       <div class="lsvr-container">
        <div class="header__content-inner">
         <!-- HEADER BRANDING : begin -->
-        <div class="header-logo">
-         <a aria-label="Site logo" class="header-logo__link" href="https://preview.lsvr.sk/townpress/">
-          <img alt="TownPress" class="header-logo__image" src="https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/header-logo.2x.png"/>
-         </a>
-        </div>
+        <div class="header-logo header-logo--front">
+          <a aria-label="Site logo" class="header-logo__link" href="/">
+           <img alt="logo" class="header-logo__image" src="{{ logo.image.url }}">
+          </a>
+         </div>
         <div class="header-toolbar-toggle">
           <button aria-controls="header-mobile-menu" aria-expanded="false" aria-haspopup="true" class="header-toolbar-toggle__menu-button" type="button">
            <span aria-hidden="true" class="header-toolbar-toggle__menu-button-ico header-toolbar-toggle__menu-button-ico--open icon-menu">
@@ -384,9 +389,9 @@ html, body { font-size: 16px; }
    </header>
    <!-- HEADER : end -->
    <div class="header-background header-background--single" data-slideshow-speed="10">
-    <div class="header-background__image header-background__image--default" style="background-image: url('https://preview.lsvr.sk/townpress/wp-content/uploads/sites/3/2017/12/header-01.2.jpg'); ">
+    <div class="header-background__image header-background__image--default" style="background-image: url('{{ images.image.url }}');">
     </div>
-   </div>
+  </div>
    <!-- CORE : begin -->
    <div id="core">
     <div class="core__inner">
@@ -424,8 +429,8 @@ html, body { font-size: 16px; }
                </div>
                <div class="bbp-breadcrumb">
                 <p>
-                 <a class="bbp-breadcrumb-home" href="https://preview.lsvr.sk/townpress">
-                  Welcome to TownPress,
+                 <a class="bbp-breadcrumb-home" href="#">
+                  Welcome to IETE,
                   <br/>
                   <em>
                    the Most Exciting Town of Northeast!
@@ -456,7 +461,7 @@ html, body { font-size: 16px; }
                 <li class="bbp-body">
                  <ul class="loop-item-0 bbp-forum-status-open bbp-forum-visibility-publish odd post-276 forum type-forum status-publish hentry" id="bbp-forum-276">
                   <li class="bbp-forum-info">
-                   <a class="bbp-forum-title" href="https://preview.lsvr.sk/townpress/forums/forum/ask-the-town-council/">
+                   <a class="bbp-forum-title" href="#">
                     {{publications.title}}
                    </a>
                    <div class="bbp-forum-content">
@@ -465,12 +470,12 @@ html, body { font-size: 16px; }
                   </li>
                   
                   <li class="bbp-forum-freshness">
-                   <a href="https://preview.lsvr.sk/townpress/forums/topic/in-various-countries-municipalities-are-sometimes-referred-to-as-communes/#post-328" title="Reply To: In various countries, municipalities are sometimes referred to as communes">
+                   <a href="#" title="Reply To: In various countries, municipalities are sometimes referred to as communes">
                     {{publications.publication_date}}
                    </a>
                    <p class="bbp-topic-meta">
                     <span class="bbp-topic-freshness-author">
-                     <a class="bbp-author-link" href="https://preview.lsvr.sk/townpress/forums/users/valeriadecima/" title="View valeriadecima's profile">
+                     <a class="bbp-author-link" href="#" title="View valeriadecima's profile">
                       <span class="bbp-author-avatar">
                        <img alt="" class="avatar avatar-14 photo" height="14" loading="lazy" src="https://secure.gravatar.com/avatar/84e69c3abb86377c6d48be069f66425f?s=14&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/84e69c3abb86377c6d48be069f66425f?s=28&amp;d=mm&amp;r=g 2x" width="14"/>
                       </span>
@@ -484,19 +489,11 @@ html, body { font-size: 16px; }
                  </ul>
                  {% endfor %}
                 
-                 </ul>
-                 <!-- #bbp-forum-268 -->
-                </li>
+
                 <!-- .bbp-body -->
-                <li class="bbp-footer">
-                 <div class="tr">
-                  <p class="td colspan4">
-                  </p>
-                 </div>
-                 <!-- .tr -->
-                </li>
+              
                 <!-- .bbp-footer -->
-               </ul>
+
                <!-- .forums-directory -->
               </div>
              </div>
@@ -715,139 +712,20 @@ html, body { font-size: 16px; }
            <div class="widget widget_text" id="text-2">
             <div class="widget__inner">
              <h3 class="widget__title">
-              About TownPress
+              About IETE
              </h3>
              <div class="textwidget">
               <p>
-               TownPress is a premium Municipality WordPress theme. It is best suited to be used as a presentation site for small to medium towns. You will find an extensive list of features to help create the website your town needs!
+               Chennai Centre of IETE is committed to attain commanding heights and achieve the status of “Centre of Excellence” in Technical, Engineering & Management education by harnessing the best practices in educational innovation and through its concerted endeavors like quality teaching, industrial consultancy and training to the aspirants including corporate training.
               </p>
-              <p>
-               <strong>
-                <a href="https://themeforest.net/user/lsvrthemes/portfolio?ref=LSVRthemes" rel="noopener" target="_blank">
-                 Purchase TownPress
-                </a>
-               </strong>
-              </p>
+              
              </div>
             </div>
            </div>
           </div>
          </div>
-         <div class="footer-widgets__column lsvr-grid__col lsvr-grid__col--span-3 lsvr-grid__col--md lsvr-grid__col--md-span-6 lsvr-grid__col--lg lsvr-grid__col--lg-span-6">
-          <div class="footer-widgets__column-inner">
-           <div class="widget lsvr_event-list-widget" id="lsvr_events_event_list-2">
-            <div class="widget__inner">
-             <h3 class="widget__title widget__title--has-icon">
-              <span aria-hidden="true" class="widget__title-icon icon-calendar-full">
-              </span>
-              Upcoming Events
-             </h3>
-             <div class="widget__content">
-              <ul class="lsvr_event-list-widget__list lsvr_event-list-widget__list--has-bold-date">
-               <li class="lsvr_event-list-widget__item lsvr_event-list-widget__item--has-thumb">
-                <p class="lsvr_event-list-widget__item-date lsvr_event-list-widget__item-date--bold" title="September 7, 2023">
-                 <span aria-hidden="true" class="lsvr_event-list-widget__item-date-month">
-                  Sep
-                 </span>
-                 <span aria-hidden="true" class="lsvr_event-list-widget__item-date-day">
-                  7
-                 </span>
-                </p>
-                <h4 class="lsvr_event-list-widget__item-title">
-                 <a class="lsvr_event-list-widget__item-title-link" href="https://preview.lsvr.sk/townpress/events/indie-movies-friday/">
-                  Indie Movies Friday
-                 </a>
-                </h4>
-                <p class="lsvr_event-list-widget__item-info">
-                 <span class="lsvr_event-list-widget__item-time" title="Event Time">
-                  3:00 pm - 11:30 pm
-                 </span>
-                 <span class="lsvr_event-list-widget__item-location" title="Event Location">
-                  at
-                  <a class="lsvr_event-list-widget__item-location-link" href="https://preview.lsvr.sk/townpress/event-location/downtown-theater/">
-                   Downtown Theater
-                  </a>
-                 </span>
-                </p>
-               </li>
-               <li class="lsvr_event-list-widget__item lsvr_event-list-widget__item--has-thumb">
-                <p class="lsvr_event-list-widget__item-date lsvr_event-list-widget__item-date--bold" title="September 8, 2023">
-                 <span aria-hidden="true" class="lsvr_event-list-widget__item-date-month">
-                  Sep
-                 </span>
-                 <span aria-hidden="true" class="lsvr_event-list-widget__item-date-day">
-                  8
-                 </span>
-                </p>
-                <h4 class="lsvr_event-list-widget__item-title">
-                 <a class="lsvr_event-list-widget__item-title-link" href="https://preview.lsvr.sk/townpress/events/theatre-performance/">
-                  Theatre Performance
-                 </a>
-                </h4>
-                <p class="lsvr_event-list-widget__item-info">
-                 <span class="lsvr_event-list-widget__item-time" title="Event Time">
-                  5:30 pm - 8:00 pm
-                 </span>
-                 <span class="lsvr_event-list-widget__item-location" title="Event Location">
-                  at
-                  <a class="lsvr_event-list-widget__item-location-link" href="https://preview.lsvr.sk/townpress/event-location/downtown-theater/">
-                   Downtown Theater
-                  </a>
-                 </span>
-                </p>
-               </li>
-              </ul>
-             </div>
-            </div>
-           </div>
-          </div>
-         </div>
-         <div class="footer-widgets__column lsvr-grid__col lsvr-grid__col--span-3 lsvr-grid__col--md lsvr-grid__col--md-span-6 lsvr-grid__col--lg lsvr-grid__col--lg-span-6">
-          <div class="footer-widgets__column-inner">
-           <div class="widget lsvr_document-list-widget" id="lsvr_documents_document_list-2">
-            <div class="widget__inner">
-             <h3 class="widget__title widget__title--has-icon">
-              <span aria-hidden="true" class="widget__title-icon icon-file-text-o">
-              </span>
-              Important Forms
-             </h3>
-             <div class="widget__content">
-              <ul class="lsvr_document-list-widget__list">
-               <li class="lsvr_document-list-widget__item">
-                <h4 class="lsvr_document-list-widget__item-title">
-                 <a class="lsvr_document-list-widget__item-title-link" href="https://preview.lsvr.sk/townpress/documents/town-board-applications/">
-                  Town Board Applications
-                 </a>
-                </h4>
-                <div class="lsvr_document-list-widget__item-info">
-                 <p class="lsvr_document-list-widget__item-date">
-                  December 2, 2018
-                 </p>
-                </div>
-               </li>
-               <li class="lsvr_document-list-widget__item">
-                <h4 class="lsvr_document-list-widget__item-title">
-                 <a class="lsvr_document-list-widget__item-title-link" href="https://preview.lsvr.sk/townpress/documents/temporary-sign-permit-application/">
-                  Temporary Sign Permit Application
-                 </a>
-                </h4>
-                <div class="lsvr_document-list-widget__item-info">
-                 <p class="lsvr_document-list-widget__item-date">
-                  November 26, 2018
-                 </p>
-                </div>
-               </li>
-              </ul>
-              <p class="widget__more">
-               <a class="widget__more-link" href="https://preview.lsvr.sk/townpress/documents/">
-                More Documents
-               </a>
-              </p>
-             </div>
-            </div>
-           </div>
-          </div>
-         </div>
+         
+         
          <div class="footer-widgets__column lsvr-grid__col lsvr-grid__col--span-3 lsvr-grid__col--md lsvr-grid__col--md-span-6 lsvr-grid__col--lg lsvr-grid__col--lg-span-6">
           <div class="footer-widgets__column-inner">
            <div class="widget widget_text" id="text-3">
@@ -859,18 +737,18 @@ html, body { font-size: 16px; }
              </h3>
              <div class="textwidget">
               <p>
-               P.O. Box 123 TownPress
-               <br/>
-               VT 12345
+               IETE Chennai centre, No: 37,
+               Conran Smith Road Entrance Peters Road,
+               Gopalapuram,Chennai,
+               Tamil Nadu 600086
               </p>
               <p>
-               Phone: (123) 456-7890
+               Phone: 044 2835 0773
                <br/>
-               Fax: (123) 456-7891
-               <br/>
+               
                Email:
-               <a href="http://wpdemos.lsvr.sk/townpress/#">
-                townpress@example.org
+               <a href="#">
+               ietechennai@gmail.com
                </a>
               </p>
              </div>
@@ -921,44 +799,13 @@ html, body { font-size: 16px; }
         </div>
         <!-- FOOTER SOCIAL LINKS : end -->
         <!-- FOOTER MENU : begin -->
-        <nav aria-label="Footer Menu" class="footer-menu">
-         <ul class="footer-menu__list" id="menu-footer-menu" role="menu">
-          <li class="footer-menu__item footer-menu__item--level-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-home" role="presentation">
-           <a class="footer-menu__item-link footer-menu__item-link--level-0" href="https://preview.lsvr.sk/townpress/" role="menuitem">
-            Home
-           </a>
-          </li>
-          <li class="footer-menu__item footer-menu__item--level-0 menu-item menu-item-type-custom menu-item-object-custom" role="presentation">
-           <a class="footer-menu__item-link footer-menu__item-link--level-0" href="http://docs.lsvr.sk/townpress.wp/" role="menuitem" target="_blank">
-            Documentation
-           </a>
-          </li>
-          <li class="footer-menu__item footer-menu__item--level-0 menu-item menu-item-type-custom menu-item-object-custom" role="presentation">
-           <a class="footer-menu__item-link footer-menu__item-link--level-0" href="https://themeforest.net/item/townpress-municipality-wordpress-theme/11490395" role="menuitem" target="_blank">
-            Purchase
-           </a>
-          </li>
-          <li class="footer-menu__item footer-menu__item--level-0 menu-item menu-item-type-post_type menu-item-object-page" role="presentation">
-           <a class="footer-menu__item-link footer-menu__item-link--level-0" href="https://preview.lsvr.sk/townpress/demo-credits/" role="menuitem">
-            Demo Credits
-           </a>
-          </li>
-         </ul>
-        </nav>
+        
         <!-- FOOTER MENU : end -->
         <!-- FOOTER TEXT : begin -->
-        <div class="footer-text">
-         <p>
-          TownPress - Municipal WordPress Theme
-         </p>
-        </div>
-        <!-- FOOTER TEXT : end -->
-       </div>
-      </div>
-     </div>
+        
      <!-- FOOTER BOTTOM : end -->
-    </div>
-   </footer>
+    
+      </footer>
    <!-- FOOTER : end -->
   </div>
   <!-- WRAPPER : end -->
